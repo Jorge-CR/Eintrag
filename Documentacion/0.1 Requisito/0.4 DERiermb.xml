@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><Db flnm="iermb" nm="iermb" ver="1.3.4">
+  <VerLbl/>
+  <VerNotes/>
+  <DefTblOpts/>
+  <DocFolder>C:\Users\ADSI\Desktop</DocFolder>
+  <Sch Cm="" nm="schemaA">
+    <Tbl UsSo="1" nm="r_entrada">
+      <TblOpts/>
+      <Pk ClNs="ent_id" nm="pkr_entrada"/>
+      <Cl au="1" df="" nm="ent_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="ent_rent" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="ent_rsal" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_id_entrada" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_id_salida" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="now()" nm="ent_created_at" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="ent_updated_at" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="ent_deleted_at" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="1" nm="fk_r_entrada_r_persona" prLkCl="per_id" upAc="1">
+        <PrTb mn="0" nm="r_persona" oe="1" sch="schemaA" zr="0"/>
+        <CdTb mn="1" nm="r_entrada" oe="1" sch="schemaA" zr="0"/>
+        <ClPr cdCl="per_id" prCl="per_id"/>
+      </Fk>
+      <Fk deAc="3" nm="fk_r_entrada_r_usuario_entrada" prLkCl="usu_id" upAc="3">
+        <PrTb mn="0" nm="r_usuario" oe="1" sch="schemaA" zr="0"/>
+        <CdTb mn="1" nm="r_entrada" oe="0" sch="schemaA" zr="1"/>
+        <ClPr cdCl="usu_id_entrada" prCl="usu_id"/>
+      </Fk>
+      <Fk deAc="1" nm="fk_r_entrada_r_usuario_salida" prLkCl="usu_id" upAc="1">
+        <PrTb mn="0" nm="r_usuario" oe="1" sch="schemaA" zr="0"/>
+        <CdTb mn="1" nm="r_entrada" oe="1" sch="schemaA" zr="0"/>
+        <ClPr cdCl="usu_id_salida" prCl="usu_id"/>
+      </Fk>
+      <Idx clu="0" ftx="0" nm="r_entrada_per_id_Idx" spa="0" unq="0">
+        <ClNs>per_id</ClNs>
+        <OptTx/>
+      </Idx>
+      <Idx clu="0" ftx="0" nm="r_entrada_usu_id_entrada_Idx" spa="0" unq="0">
+        <ClNs>usu_id_entrada</ClNs>
+        <OptTx/>
+      </Idx>
+      <Idx clu="0" ftx="0" nm="r_entrada_usu_id_salida_Idx" spa="0" unq="0">
+        <ClNs>usu_id_salida</ClNs>
+        <OptTx/>
+      </Idx>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="r_persona">
+      <TblOpts/>
+      <Pk ClNs="per_id" nm="pkr_persona"/>
+      <Cl au="1" df="" nm="per_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_cedula" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_nombre" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_apellidos" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_genero" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="2" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_direccion" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_telfijo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="10" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_celular" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="12" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_correo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_rh" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="5" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_acudiente" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_celacu" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="12" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_grado" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="5" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_updated_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_created_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_deleted_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Idx clu="0" ftx="0" nm="r_persona_per_cedula_Idx" spa="0" unq="1">
+        <ClNs>per_cedula</ClNs>
+        <OptTx/>
+      </Idx>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="r_rol">
+      <TblOpts/>
+      <Pk ClNs="rol_id" nm="pkr_rol"/>
+      <Cl au="1" df="" nm="rol_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rol_nombre" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Idx clu="0" ftx="0" nm="r_rol_rol_nombre_Idx" spa="0" unq="1">
+        <ClNs>rol_nombre</ClNs>
+        <OptTx/>
+      </Idx>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="r_usuario">
+      <TblOpts/>
+      <Pk ClNs="usu_id" nm="pkr_usuario"/>
+      <Cl au="1" df="" nm="usu_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rol_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_cedula" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_nombre" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_direccion" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_telfijo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="10" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_celular" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="12" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_correo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_contraseña" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="32" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_created_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_updated_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_deleted_at" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="1" nm="fk_usuario_rol" prLkCl="rol_id" upAc="1">
+        <PrTb mn="0" nm="r_rol" oe="1" sch="schemaA" zr="0"/>
+        <CdTb mn="1" nm="r_usuario" oe="1" sch="schemaA" zr="0"/>
+        <ClPr cdCl="rol_id" prCl="rol_id"/>
+      </Fk>
+      <Idx clu="0" ftx="0" nm="r_usuario_rol_id_Idx" spa="0" unq="0">
+        <ClNs>rol_id</ClNs>
+        <OptTx/>
+      </Idx>
+      <Idx clu="0" ftx="0" nm="r_usuario_usu_cedula_Idx" spa="0" unq="1">
+        <ClNs>usu_cedula</ClNs>
+        <OptTx/>
+      </Idx>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <CustomTypes/>
+  </Sch>
+  <Dgm nm="diagramA">
+    <RnCf ClkAct="true" FtSz="9" lkStgy="OffsetDirect" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="0"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="0" PkCols="1"/>
+      <ErNotation>InfoEngErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path=""/>
+    </DiaProps>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_entrada" x="204" y="108"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_persona" x="517" y="99"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_usuario" x="207" y="323"/>
+    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_rol" x="529" y="353"/>
+    <FkGl bkCl="ff000000" childEdge="EAST" nm="schemaA.r_entrada.fk_r_entrada_r_persona" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
+      <positionableLines/>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.r_entrada.fk_r_entrada_r_usuario_entrada" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines/>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="" nm="schemaA.r_entrada.fk_r_entrada_r_usuario_salida" parentEdge="" positioner="">
+      <positionableLines/>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="EAST" nm="schemaA.r_usuario.fk_usuario_rol" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
+      <positionableLines/>
+    </FkGl>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <RnmMgr NxRnmId="10">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="1" nNm="ent_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_persona" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="2" nNm="per_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_usuario" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="3" nNm="usu_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_rol" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="4" nNm="rol_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="5" nNm="r_usuario" oNm="usuario"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+      <Rnm id="6" nNm="r_rol" oNm="rol"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="7" nNm="usu_id_entrada" oNm="usu_id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="8" nNm="ent_updated_at" oNm="ent_update_at"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
+      <Rnm id="9" nNm="ent_deleted_at" oNm="ent_delete_at"/>
+    </RnmCh>
+  </RnmMgr>
+  <DbDocOptionMgr>
+    <BasicOptionMgr>
+      <Name>db.doc.option.mgr</Name>
+      <BoolOpt lbl="Diagrams" nm="doc.diagrams" on="1" spl="0"/>
+      <BoolOpt lbl="Foreign Keys" nm="doc.fks" on="1" spl="0"/>
+      <BoolOpt lbl="Indexes" nm="doc.indexes" on="1" spl="0"/>
+      <BoolOpt lbl="Overwrite CSS File" nm="doc.overwrite.css" on="1" spl="0"/>
+      <BoolOpt lbl="Procedures" nm="doc.procs" on="1" spl="0"/>
+      <BoolOpt lbl="Schemas" nm="doc.schemas" on="1" spl="0"/>
+      <BoolOpt lbl="Sequences" nm="doc.sequences" on="1" spl="0"/>
+      <BoolOpt lbl="Tables" nm="doc.tables" on="1" spl="0"/>
+      <BoolOpt lbl="Triggers" nm="doc.triggers" on="1" spl="0"/>
+      <BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
+    </BasicOptionMgr>
+  </DbDocOptionMgr>
+  <OpenEditors>
+    <OpenEditor ClsNm="Diagram" fqn="null.diagramA" selected="1"/>
+  </OpenEditors>
+  <TreePaths>
+    <TreePath/>
+  </TreePaths>
+</Db>
