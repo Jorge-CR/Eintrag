@@ -171,8 +171,8 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="85" name="Proyecto Formativo" meeting="false" start="2017-03-21" duration="75" complete="14" expand="true">
-            <task id="0" name="Requerimientos" meeting="false" start="2017-03-21" duration="15" complete="86" expand="true">
+        <task id="85" name="Proyecto Formativo" meeting="false" start="2017-03-21" duration="75" complete="16" expand="true">
+            <task id="0" name="Requerimientos" meeting="false" start="2017-03-21" duration="15" complete="97" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
                 <task id="8" name="Historias de usuario" color="#8cb6ce" meeting="false" start="2017-03-21" duration="5" complete="100" expand="true">
                     <depend id="3" type="2" difference="0" hardness="Strong"/>
@@ -185,8 +185,8 @@
                     <depend id="10" type="2" difference="0" hardness="Strong"/>
                     <depend id="14" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="10" name="Diccionario de datos" color="#8cb6ce" meeting="false" start="2017-04-04" duration="1" complete="0" expand="true"/>
-                <task id="14" name="Prototipos no funcionales" color="#8cb6ce" meeting="false" start="2017-04-04" duration="5" complete="60" expand="true"/>
+                <task id="10" name="Diccionario de datos" color="#8cb6ce" meeting="false" start="2017-04-04" duration="1" complete="100" expand="true"/>
+                <task id="14" name="Prototipos no funcionales" color="#8cb6ce" meeting="false" start="2017-04-04" duration="5" complete="90" expand="true"/>
             </task>
             <task id="16" name="Ajuste a Requerimientos" color="#8cb6ce" meeting="false" start="2017-04-11" duration="5" complete="0" expand="true"/>
             <task id="18" name="Programar" color="#8cb6ce" meeting="false" start="2017-04-18" duration="33" complete="0" expand="false">
