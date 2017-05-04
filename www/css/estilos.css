@@ -1,0 +1,44 @@
+
+ .contenedor6{
+     padding-top: 0px;
+     padding-right: 0px;
+     
+    border: 3px solid black !important ;
+    margin: 000000;
+    color: #006666;
+    background: white !important;
+    margin: auto;
+    height: 528px;
+    width: 590px;
+    margin-top: 200px;
+}    
+
+.panel1{
+    border: 1px solid black !important;
+    height: 70px;
+     width: 100%;
+    background: green !important;
+      margin-top: 125px;
+      margin-right: 100px;
+}
+.panel2{
+    margin-top: 0px;
+    border: 1px solid black !important;
+    height: 70px;
+     width: 100%;
+    background: green !important;
+      margin-right: 300px;
+}
+
+.C1{
+ border: 1px solid black;
+ width: 130px;
+ height: 25px;
+}
+
+.button{
+ border-color: black;
+}
+.im{
+    margin-right: 480px;
+}
