@@ -1,44 +1,291 @@
+/*
+- realizaremos todo por seccion para tener un mejor orden
+*/
+/*------------------------------------------LOGIN------------------------------------------*/
 
  .contenedor6{
      padding-top: 0px;
-     padding-right: 0px;
-     
+     padding-right: 0px;     
     border: 3px solid black !important ;
     margin: 000000;
     color: #006666;
     background: white !important;
     margin: auto;
-    height: 528px;
+    height: 509px;
     width: 590px;
     margin-top: 200px;
-}    
-
+}
 .panel1{
     border: 1px solid black !important;
     height: 70px;
      width: 100%;
     background: green !important;
-      margin-top: 125px;
-      margin-right: 100px;
+    margin-top: 2px;
+    
 }
 .panel2{
+    padding-top: 0px;
     margin-top: 0px;
     border: 1px solid black !important;
     height: 70px;
      width: 100%;
     background: green !important;
-      margin-right: 300px;
+   
+}
+.button{
+ border-color: black;
+ width: 90px;
+ margin-left: 11px;
+ margin-bottom: 60px;
+ margin-top: 25px;
 }
 
 .C1{
+ margin-top: 0px;
  border: 1px solid black;
  width: 130px;
  height: 25px;
 }
+.espaciolo{
+    margin-top: 50px;
+}
+/*------------------------------------------/LOGIN------------------------------------------*/
 
-.button{
+/*------------------------------------------Menu Principal------------------------------------------*/
+.panelMp{
+
+    border: 1px solid black !important;
+   height: 90px;
+    width: 100%;
+    background: green !important;
+    margin-bottom: 25px;
+
+
+}
+.panelMp1{
+    margin-top: 160px;
+    border: 1px solid black !important;
+   height: 90px;
+     width: 100%;
+    background: green !important;
+      margin-right: 0px;
+}
+.buttonMenu{
  border-color: black;
+ width: 180px;
+ height: 50px;
+ margin-left: 5px;
+ margin-top: 35px;
+ margin-right: 0px;
+ margin-bottom: 70px;
 }
-.im{
-    margin-right: 480px;
+.letraMenu{
+    font-size: 25px;
 }
+.tituloMenuP{
+    font-size: 55px;
+
+}
+.campologom{
+    margin-top:50px;
+     margin-right:0px;
+     width:450px; 
+     height:350px;
+     padding-right: 0px;
+     margin-bottom: 70px;
+}
+
+
+
+/*------------------------------------------/Menu Principal------------------------------------------*/
+
+/*------------------------------------------Agregar Usuario------------------------------------------*/
+    
+.contenedor1{
+     padding-top: 0px;
+     padding-right: 0px;
+    border: 3px solid black !important ;
+    margin: 000000;
+    color: #006666;
+    background: white !important;
+    margin: auto;
+    height: 525px;
+    width: 1220px;
+    margin-top: 150px;
+    margin-bottom: 160px;
+}    
+
+
+.panelAgU1{
+    margin-top: 0px;
+    border: 1px solid black !important;
+   height: 90px;
+    width: 100%;
+    background: green !important;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+.panelAgU2{
+    margin-top: 0px;
+    border: 1px solid black !important;
+    height: 90px;
+    width: 100%;
+    background: green !important;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+.C2{
+ border: 1px solid black;
+ height: 28px;
+
+}
+.C3{
+ border: 1px solid black;
+ height: 25px;
+ width: 155px;
+
+
+}
+
+.button1{
+ border-color: black;
+ width: 100px;
+ margin-left: 15px;
+ margin-top: 35px;
+ margin-right: 0px;
+}
+
+
+.labelPersonal{
+    margin-top: 0px;
+    font-size: 15px;
+    color: black;
+     margin-left: 110px;
+}
+.campofoto{
+    margin-top: 60px;
+     margin-right:0px;
+     width:104px; 
+     height:136px;
+     padding-right: 0px;
+     margin-left: 10px;
+}
+.bfoto{
+     margin-right: 0px;
+     margin-bottom: 5px;
+}
+.ep{
+     margin-top: 145px;
+     margin-right: 0px;
+ 
+     
+}
+.ep1{
+     margin-top: 145px;
+}
+
+/*-----------------------------------------/Agregar usuario------------------------------------------*/
+
+/*------------------------------------------Agregar Personal------------------------------------------*/
+
+
+
+/*-----------------------------------------/Agregar Personal------------------------------------------*/
+
+/*------------------------------------------Control Entrada------------------------------------------*/
+
+
+/*------------------------------------------/Control Entrada------------------------------------------*/
+
+/*------------------------------------------Reportes------------------------------------------*/
+
+
+
+/*------------------------------------------Reportes------------------------------------------*/
+
+
+/*------------------------------------------CopyRight------------------------------------------*/
+
+    
+.contenedor2{
+    padding-top: 0px;
+    padding-right: 0px;
+    border: 3px solid black !important ;
+    margin: 000000;
+    color: #006666;
+    background: white !important;
+    height: 525px;
+    width: 1220px;
+
+   
+}    
+
+.panelAc{
+    margin-top: 0px;
+    border: 1px solid black !important;
+   height: 90px;
+     width: 100%;
+    background: green !important;
+      margin-right: 300px;
+      
+}
+.panelAc2{
+    margin-top: 150px;
+    border: 1px solid black !important;
+    height: 90px;
+    width: 100%;
+    background: green !important;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.campologo{
+    margin-top: 60px;
+     width:150px; 
+     height:136px;
+     margin-left: 35px;
+}
+.campologo2{
+    margin-top:0px;
+     margin-right:0px;
+     width:104px; 
+     height:136px;
+     padding-right: 0px;
+     margin-left: 15px;
+}
+.letra{
+    font-size: 17px;
+    margin-top: 0px;
+    margin-right: 0px;
+
+}
+.letra1{
+        font-size: 17px;
+        margin-right: 10px;
+}
+.letra2{
+        font-size: 17px;
+        margin-left: 70px;
+}
+.espacio{
+    margin-top: 250px;
+}
+.salir{
+  color: black;
+  font-size: 52px;
+  margin-left: 0px;
+}
+.Copy{
+  color: black;
+  font-size: 52px;
+  margin-left: 0px;
+}
+.tituloacercade{
+    font-size: 55px;
+}
+/*------------------------------------------/CopyRight------------------------------------------*/
+
