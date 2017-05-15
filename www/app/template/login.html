@@ -14,20 +14,25 @@
             <div class=" col-lg-6 espaciolo">
                 <center>
                     <center><strong><font color="black" face="Monotype" size="5" >{{Texto2}}</font></strong></center><br>
-                    <input type="text" class="C1" placeholder="Nombre Usuario"><br><br>
+                    <input ng-model="datos.usuario" type="Text" class="form-control C1" id="usuario" placeholder=" Nombre Usuario" required><br>
                     <center><strong><font color="black" face="Monotype" size="5" >{{Texto3}}</font></strong></center><br>
-                    <input type="text" class="C1" placeholder="Ingrese contraseña">
+                    <input ng-model="datos.contrasena" type="password" class="form-control C1" id="exampleInputPassword1" placeholder="Ingrese Contraseña" required>
 
+                    <div class="alert alert-danger" style="margin-top: 40px;" ng-show="usuarioErroneo">
+                        Usuario inválido
+                    </div>
                     <div class="col-l-6">
                         <a href="#!/MenuPrincipal"><button type="button" class="btn btn-success btn-responsive btninter centrado button">Aceptar</button></a>
                         <button type="button"  class="btn btn-success btn-responsive btninter right centrado button ">Salir</button> 
                     </div>
+
+
                 </center>
             </div>
 
             <div class="col-lg-12 alert alert-warning  panel1">
-            
+
             </div> 
-         </div>
+        </div>
     </div>
 </div>
