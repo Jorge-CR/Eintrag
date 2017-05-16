@@ -13,9 +13,21 @@ angular.module('Eintrag').config(['$routeProvider',
                     controller: 'AgUsController',
                     templateUrl: 'app/template/AgUsuario.html'
                 }).
-                         when('/copyrigth', {
+                when('/copyrigth', {
                     controller: 'CopyController',
                     templateUrl: 'app/template/copyrigth.html'
+                }).
+                when('/registroAlumno', {
+                    controller: 'registroAlumnoController',
+                    templateUrl: 'app/template/registroAlumno.html'
+                }).
+                when('/controlEntrada', {
+                    controller: 'controlEntradaController',
+                    templateUrl: 'app/template/controlEntrada.html'
+                }).
+                when('/controlEntrada', {
+                    controller: 'reportesController',
+                    templateUrl: 'app/template/reportes.html'
                 }).
                 otherwise('/');
     }]);

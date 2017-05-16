@@ -1,0 +1,21 @@
+.franja1{
+    background-color: green;
+    height: 70px;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 0px;
+}
+.titulo{
+    font-size: 30px;
+    color: black;
+}
+
+.contenedorPrincipal{
+    border: solid 2px black;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.tabla{
+    margin-top: 20px;
+}
