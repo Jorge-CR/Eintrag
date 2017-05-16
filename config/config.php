@@ -1,7 +1,7 @@
 <?php
 
 $config = new myConfig();
-$config->setPath('E:/xampp/htdocs/caac/');
+$config->setPath('E:/xampp/htdocs/Eintrag/');
 
 $config->setDrive('pgsql');
 $config->setHost('localhost');
@@ -11,4 +11,4 @@ $config->setPassword('jorge1998');
 $config->setDbname('Eintrag');
 $config->setHash('md5');
 
-$config->setUrl('http://localhost/caac/www/');
+$config->setUrl('http://localhost/Eintrag/www/');
