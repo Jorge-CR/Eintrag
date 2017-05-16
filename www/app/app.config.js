@@ -25,10 +25,23 @@ angular.module('Eintrag').config(['$routeProvider',
                     controller: 'controlEntradaController',
                     templateUrl: 'app/template/controlEntrada.html'
                 }).
-                when('/controlEntrada', {
+                when('/reportes', {
                     controller: 'reportesController',
                     templateUrl: 'app/template/reportes.html'
                 }).
+                when('/reporteGeneral', {
+                    controller: 'reporteGeneralController',
+                    templateUrl: 'app/template/reporteGeneral.html'
+                }).
+                when('/reporteAlumno', {
+                    controller: 'reporteAlumnoController',
+                    templateUrl: 'app/template/reporteAlumno.html'
+                }).
+                when('/reporteFecha', {
+                    controller: 'reporteFechaController',
+                    templateUrl: 'app/template/reporteFecha.html'
+                }).
+                        
                 otherwise('/');
     }]);
 
