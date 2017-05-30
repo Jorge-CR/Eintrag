@@ -12,31 +12,29 @@
     background: white !important;
     margin: auto;
     height: 509px;
-    width: 590px;
+    width: 610px;
     margin-top: 200px;
 }
 .panel1{
     border: 1px solid black !important;
     height: 70px;
-    width: 100%;
+  
     background: green !important;
-    margin-top: 2px;
+
 
 }
 .panel2{
+    text-align: center;
     padding-top: 0px;
     margin-top: 0px;
     border: 1px solid black !important;
     height: 70px;
-    width: 100%;
+  
     background: green !important;
 
 }
 .button{
     border-color: black;
-    width: 90px;
-    margin-left: 11px;
-    margin-bottom: 60px;
     margin-top: 25px;
 }
 
@@ -48,6 +46,13 @@
 }
 .espaciolo{
     margin-top: 50px;
+    margin-right: 70px;
+    margin-bottom: 36px;
+}
+.Mensa{
+    width: 250px;
+   text-align: center;
+   margin-left: 820px;
 }
 /*------------------------------------------/LOGIN------------------------------------------*/
 

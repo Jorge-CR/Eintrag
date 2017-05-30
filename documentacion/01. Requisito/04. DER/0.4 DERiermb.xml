@@ -3,11 +3,11 @@
   <VerNotes/>
   <DefTblOpts/>
   <DocFolder>C:\Users\ADSI\Desktop</DocFolder>
-  <Sch Cm="" nm="schemaA">
+  <Sch Cm="" nm="public">
     <Tbl UsSo="1" nm="r_entrada">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="ent_id" nm="pkr_entrada"/>
-      <Cl au="1" df="" nm="ent_id" nu="0">
+      <Cl au="1" df="nextval('r_entrada_ent_id_seq'::regclass)" nm="ent_id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="ent_rent" nu="0">
@@ -35,39 +35,39 @@
         <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Fk deAc="1" nm="fk_r_entrada_r_persona" prLkCl="per_id" upAc="1">
-        <PrTb mn="0" nm="r_persona" oe="1" sch="schemaA" zr="0"/>
-        <CdTb mn="1" nm="r_entrada" oe="1" sch="schemaA" zr="0"/>
+        <PrTb mn="0" nm="r_persona" oe="1" sch="public" zr="0"/>
+        <CdTb mn="1" nm="r_entrada" oe="1" sch="public" zr="0"/>
         <ClPr cdCl="per_id" prCl="per_id"/>
       </Fk>
       <Fk deAc="3" nm="fk_r_entrada_r_usuario_entrada" prLkCl="usu_id" upAc="3">
-        <PrTb mn="0" nm="r_usuario" oe="1" sch="schemaA" zr="0"/>
-        <CdTb mn="1" nm="r_entrada" oe="0" sch="schemaA" zr="1"/>
+        <PrTb mn="0" nm="r_usuario" oe="1" sch="public" zr="0"/>
+        <CdTb mn="1" nm="r_entrada" oe="0" sch="public" zr="1"/>
         <ClPr cdCl="usu_id_entrada" prCl="usu_id"/>
       </Fk>
       <Fk deAc="1" nm="fk_r_entrada_r_usuario_salida" prLkCl="usu_id" upAc="1">
-        <PrTb mn="0" nm="r_usuario" oe="1" sch="schemaA" zr="1"/>
-        <CdTb mn="1" nm="r_entrada" oe="1" sch="schemaA" zr="0"/>
+        <PrTb mn="0" nm="r_usuario" oe="1" sch="public" zr="1"/>
+        <CdTb mn="1" nm="r_entrada" oe="1" sch="public" zr="0"/>
         <ClPr cdCl="usu_id_salida" prCl="usu_id"/>
       </Fk>
       <Idx clu="0" ftx="0" nm="r_entrada_per_id_Idx" spa="0" unq="0">
         <ClNs>per_id</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <Idx clu="0" ftx="0" nm="r_entrada_usu_id_entrada_Idx" spa="0" unq="0">
         <ClNs>usu_id_entrada</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <Idx clu="0" ftx="0" nm="r_entrada_usu_id_salida_Idx" spa="0" unq="0">
         <ClNs>usu_id_salida</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
     <Tbl UsSo="1" nm="r_persona">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="per_id" nm="pkr_persona"/>
-      <Cl au="1" df="" nm="per_id" nu="0">
+      <Cl au="1" df="nextval('r_persona_per_id_seq'::regclass)" nm="per_id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_cedula" nu="0">
@@ -107,25 +107,25 @@
         <DT arr="0" ds="VarChar" en="" id="12" ln="5" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_updated_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_created_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_deleted_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Idx clu="0" ftx="0" nm="r_persona_per_cedula_Idx" spa="0" unq="1">
         <ClNs>per_cedula</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
     <Tbl UsSo="1" nm="r_rol">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="rol_id" nm="pkr_rol"/>
-      <Cl au="1" df="" nm="rol_id" nu="0">
+      <Cl au="1" df="nextval('r_rol_rol_id_seq'::regclass)" nm="rol_id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="rol_nombre" nu="0">
@@ -133,15 +133,15 @@
       </Cl>
       <Idx clu="0" ftx="0" nm="r_rol_rol_nombre_Idx" spa="0" unq="1">
         <ClNs>rol_nombre</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
     <Tbl UsSo="1" nm="r_usuario">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="usu_id" nm="pkr_usuario"/>
-      <Cl au="1" df="" nm="usu_id" nu="0">
+      <Cl au="1" df="nextval('r_usuario_usu_id_seq'::regclass)" nm="usu_id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="rol_id" nu="0">
@@ -169,30 +169,42 @@
         <DT arr="0" ds="VarChar" en="" id="12" ln="32" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_created_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_updated_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_deleted_at" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Fk deAc="1" nm="fk_usuario_rol" prLkCl="rol_id" upAc="1">
-        <PrTb mn="0" nm="r_rol" oe="1" sch="schemaA" zr="0"/>
-        <CdTb mn="1" nm="r_usuario" oe="1" sch="schemaA" zr="0"/>
+        <PrTb mn="0" nm="r_rol" oe="1" sch="public" zr="0"/>
+        <CdTb mn="1" nm="r_usuario" oe="1" sch="public" zr="0"/>
         <ClPr cdCl="rol_id" prCl="rol_id"/>
       </Fk>
       <Idx clu="0" ftx="0" nm="r_usuario_rol_id_Idx" spa="0" unq="0">
         <ClNs>rol_id</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <Idx clu="0" ftx="0" nm="r_usuario_usu_cedula_Idx" spa="0" unq="1">
         <ClNs>usu_cedula</ClNs>
-        <OptTx/>
+        <OptTx>USING btree</OptTx>
       </Idx>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
+    <Seq incr="1" nm="r_entrada_ent_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="r_persona_per_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="r_rol_rol_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="r_usuario_usu_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
     <CustomTypes/>
   </Sch>
   <Dgm nm="diagramA">
@@ -217,26 +229,26 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path=""/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_entrada" x="21" y="17"/>
-    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_persona" x="334" y="8"/>
-    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_usuario" x="24" y="232"/>
-    <TbGl bkCl="ff6666ff" sch="schemaA" tbl="r_rol" x="346" y="262"/>
-    <FkGl bkCl="ff000000" childEdge="EAST" nm="schemaA.r_entrada.fk_r_entrada_r_persona" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
+    <TbGl bkCl="ff6666ff" sch="public" tbl="r_entrada" x="21" y="17"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="r_persona" x="334" y="8"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="r_usuario" x="24" y="232"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="r_rol" x="346" y="262"/>
+    <FkGl bkCl="ff000000" childEdge="EAST" nm="public.r_entrada.fk_r_entrada_r_persona" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
       <positionableLines/>
     </FkGl>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="schemaA.r_entrada.fk_r_entrada_r_usuario_entrada" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="public.r_entrada.fk_r_entrada_r_usuario_entrada" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
       <positionableLines/>
     </FkGl>
-    <FkGl bkCl="ff000000" childEdge="" nm="schemaA.r_entrada.fk_r_entrada_r_usuario_salida" parentEdge="" positioner="">
+    <FkGl bkCl="ff000000" childEdge="" nm="public.r_entrada.fk_r_entrada_r_usuario_salida" parentEdge="" positioner="">
       <positionableLines/>
     </FkGl>
-    <FkGl bkCl="ff000000" childEdge="EAST" nm="schemaA.r_usuario.fk_usuario_rol" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
+    <FkGl bkCl="ff000000" childEdge="EAST" nm="public.r_usuario.fk_usuario_rol" parentEdge="WEST" positioner="OneLineUserLinkPositioner">
       <positionableLines/>
     </FkGl>
     <Notes/>
     <Zones/>
   </Dgm>
-  <RnmMgr NxRnmId="10">
+  <RnmMgr NxRnmId="11">
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
       <Rnm id="1" nNm="ent_id" oNm="Id"/>
     </RnmCh>
@@ -249,10 +261,10 @@
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_rol" SupCls="Schema" SupNme="schemaA">
       <Rnm id="4" nNm="rol_id" oNm="Id"/>
     </RnmCh>
-    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="public" SupCls="" SupNme="">
       <Rnm id="5" nNm="r_usuario" oNm="usuario"/>
     </RnmCh>
-    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="schemaA" SupCls="" SupNme="">
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="public" SupCls="" SupNme="">
       <Rnm id="6" nNm="r_rol" oNm="rol"/>
     </RnmCh>
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
@@ -263,6 +275,9 @@
     </RnmCh>
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="r_entrada" SupCls="Schema" SupNme="schemaA">
       <Rnm id="9" nNm="ent_deleted_at" oNm="ent_delete_at"/>
+    </RnmCh>
+    <RnmCh ObjCls="Schema" ParCls="Database" ParNme="iermb" SupCls="" SupNme="">
+      <Rnm id="10" nNm="public" oNm="schemaA"/>
     </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>
@@ -281,10 +296,11 @@
     </BasicOptionMgr>
   </DbDocOptionMgr>
   <OpenEditors>
-    <OpenEditor ClsNm="Diagram" fqn="null.diagramA" selected="1"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.diagramA" selected="0"/>
   </OpenEditors>
   <TreePaths>
     <TreePath/>
+    <TreePath>/Schemas (1)</TreePath>
   </TreePaths>
   <SqlTexts/>
 </Db>

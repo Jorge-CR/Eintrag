@@ -11,7 +11,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function insert(\usuario $usuario) {
-        $sql = 'INSERT INTO r_usuario (usu_cedula,usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, usu_usuario, usu_contrasena, rol_id, usu_create_at) VALUES (:cedula, :foto, :nombre, :celular, :correo, :user, :pass, :rol_id, now())';
+        $sql = 'INSERT INTO r_usuario (usu_cedula,usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, usu_usuario, usu_contraseña, rol_id, usu_create_at) VALUES (:cedula, :foto, :nombre, :celular, :correo, :user, :pass, :rol_id, now())';
         $params = array(
             ':cedula' => $usuario->getCedula(),
             ':nombre' => $usuario->getNombre(),

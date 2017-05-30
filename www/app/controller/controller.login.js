@@ -1,22 +1,49 @@
-angular.module('Eintrag').controller('loginController', ['$scope', 'loginService', function ($scope, log) {
-                $scope.Imagen = null;
-                $scope.Texto1 = null;
-                $scope.Texto2 = null;
-                $scope.Texto3 = null;
+    angular.module('Eintrag').controller('loginController', ['$scope', 'securityService', '$sessionStorage', '$location', 'rolAdmin', function ($scope, security, $sessionStorage, $location, rolAdmin) {
+        $scope.datos = {};
+        $scope.usuarioErroneo = false;
+        $scope.submit = function () {
 
+//      $.ajax({
+//        url: 'http://localhost/cras/www/server.php/login',
+//        type: 'POST',
+//        data: $scope.datos,
+//        success: function (response) {
+//          if (response.codigo == 500) {
+//            $scope.$apply(function () {
+//              $scope.usuarioErroneo = true;
+//              $scope.datos = {};
+//            });
+//          } else {
+//            $scope.$apply(function () {
+//              $sessionStorage.usuario = response.usuario[0];
+//              if ($sessionStorage.usuario.rol_id == rolAdmin) {
+//                $location.path('/MenuPrincipal');
+//              } else {
+//                $location.path('/registroAlumno');
+//              }
+//            });
+//          }
+//        }
+//      });
 
-//                $scope.personas = null;
+            security.validateUserAndPassword($scope.datos).then(function successCallback(response) {
+                console.log(response);
+                $scope.usuarioErroneo = false;
+                if (response.data.codigo == 500) {
+                    $scope.usuarioErroneo = true;
+                    $scope.datos = {};
+                } else {
+                    $sessionStorage.usuario = response.data.usuario[0];
+                    $location.path('/MenuPrincipal');
+//                    if ($sessionStorage.usuario.rol_id == rolAdmin) {
+//                        $location.path('/MenuPrincipal');
+//                    } else {
+//                        $location.path('/registroAlumno');
+//                    }
+                }
+            }, function errorCallback(response) {
+                console.error(response);
+            });
 
-                log.getMyindex.then(function successCallback(response) {
-//                    console.log(response.data);
-//                    $scope.personas = response.data;
-                    $scope.Imagen = response.data.Imagen;
-                    $scope.Texto1 = response.data.Texto1;
-                    $scope.Texto2 = response.data.Texto2;
-                    $scope.Texto3 = response.data.Texto3;
-
-
-                }, function errorCallback(response) {
-                    console.log(response);
-                });
-            }]);
+        };
+    }]);

@@ -1,8 +1,8 @@
-   <html ng-app="Eintrag">
+<!DOCTYPE html>
+<html ng-app="Eintrag">
     <head>
-
         <title>IE RMB</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-sacle=1, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -18,35 +18,45 @@
         <div class=" ng-view ng-cloak"></div>
 
         <!-- librerias de Angular -->
-        <script src="js/angular-1.6.1/angular.min.js" type="text/javascript"></script>
-        <script src="js/angular-1.6.1/angular-route.min.js" type="text/javascript"></script>
-        <script src="js/angular-1.6.1/angular-resource.min.js" type="text/javascript"></script>
+        <script src="js/angular-1.6.1/angular.min.js"></script>
+        <script src="js/angular-1.6.1/angular-route.min.js"></script>
+        <script src="js/angular-1.6.1/angular-resource.min.js"></script>
+        <script src="js/ngStorage.min.js"></script>
+        <script src="js/angular-middleware.min.js"></script>
 
         <!-- librerias js -->
         <script src="js/jquery-1.12.4.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
-        <!-- enlazamos app.js y app.config.js -->
-        <script src="app/app.js" type="text/javascript"></script>
-        <script src="app/app.config.js" type="text/javascript"></script>
+         <!--cargamos los middleware (software intermedio)-->
+        <script src="app/middleware/middleware.ComprobarSession.js"></script>
+        <script src="app/middleware/middleware.ComprobarPermisoDeAdministracion.js"></script>
+        <script src="app/middleware/middleware.ComprobarPermisoDeInvitado.js"></script>
+        <script src="app/middleware/middleware.ComprobarNoTenerSesion.js"></script>
 
-        <script src="app/service/service.login.js" type="text/javascript"></script>
-        <script src="app/service/service.Menu.js" type="text/javascript"></script>
-        <script src="app/service/service.AgUs.js" type="text/javascript"></script>
-        <script src="app/service/service.Copyrigth.js" type="text/javascript"></script>
-        <script src="app/service/service.service.security.js" type="text/javascript"></script>
-        
+
+        <!-- enlazamos app.js y app.config.js -->
+        <script src="app/app.js"></script>
+        <script src="app/app.config.js"></script>
+
+        <script src="app/service/service.login.js"></script>
+        <script src="app/service/service.Menu.js"></script>
+        <script src="app/service/service.AgUs.js"></script>
+        <script src="app/service/service.Copyrigth.js"></script>
+        <script src="app/service/service.security.js"></script>
+
         <!-- enlazamos los controllers -->
-        <script src="app/controller/controller.login.js" type="text/javascript"></script>
-        <script src="app/controller/controller.menu.js" type="text/javascript"></script>
-        <script src="app/controller/controller.AgUsuario.js" type="text/javascript"></script>
-        <script src="app/controller/controller.Copyrigth.js" type="text/javascript"></script>
-        <script src="app/controller/controller.registroAlumnoController.js" type="text/javascript"></script>
-        <script src="app/controller/controller.reportesController.js" type="text/javascript"></script>
-        <script src="app/controller/controller.controlEntradaController.js" type="text/javascript"></script>
-        <script src="app/controller/controller.reporteGeneral.js" type="text/javascript"></script>
-        <script src="app/controller/controller.reporteAlumno.js" type="text/javascript"></script>
-        <script src="app/controller/controller.reporteFecha.js" type="text/javascript"></script>
+        <script src="app/controller/controller.login.js"></script>
+        <script src="app/controller/controller.menu.js"></script>
+        <script src="app/controller/controller.AgUsuario.js"></script>
+        <script src="app/controller/controller.Copyrigth.js"></script>
+        <script src="app/controller/controller.registroAlumno.js"></script>
+        <script src="app/controller/controller.reportes.js"></script>
+        <script src="app/controller/controller.controlEntrada.js"></script>
+        <script src="app/controller/controller.reporteGeneral.js"></script>
+        <script src="app/controller/controller.reporteAlumno.js"></script>
+        <script src="app/controller/controller.reporteFecha.js"></script>
+        <script src="app/controller/controller.logout.js"></script>
     </body>
 </html>
 

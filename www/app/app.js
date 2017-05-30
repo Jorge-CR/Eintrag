@@ -1,1 +1,6 @@
-angular.module('Eintrag', ['ngRoute', 'ngResource']);
+angular.module('Eintrag', [
+    'ngRoute', 
+    'ngResource',
+    'ngStorage',
+    'ngRoute.middleware'
+]);

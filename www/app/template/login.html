@@ -1,38 +1,47 @@
 <link rel="stylesheet" href="css/estilos.css">
-<div class=" container container-fluid">
-    <div class="row">
-        <div class=" contenedor6 ">
-            <div class=" col-lg-12 alert alert-warning panel2">
-                <div class="col-lg-12">
-                    <center> <h1><font  color="black" face="Monotype"  >{{Texto1}}</font></h1></center>
+<form ng-submit="submit()">
+    <div class=" container container-fluid">
+        <div class="row">
+            <div class=" contenedor6 ">
+                <div class=" col-lg-12 alert alert-warning panel2">
+                    <div class="col-lg-12">
+                        <center> <h1><font  color="black" face="Monotype"  >I.E RMB</font></h1></center>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-lg-3 col-lg-offset-1">
+                        <img class="img-responsive" src="img\logo.png"> 
+                    </div>
+
+                    <div class=" col-lg-5 espaciolo">
+
+                        <center><strong><font color="black" face="Monotype" size="5" >Usuario</font></strong></center><br>
+                        <input ng-model="datos.usuario" type="Text" class="form-control " id="usuario" placeholder=" Nombre Usuario" required><br>
+                        <center><strong><font color="black" face="Monotype" size="5" >Contraseña</font></strong></center><br>
+                        <input ng-model="datos.contrasena" type="password" class="form-control " id="exampleInputPassword1" placeholder="Ingrese Contraseña" required>
+
+                  
+                        <div class="row">
+                            <div class="col-lg-5 col-lg-offset-1" >
+                                <button type="submit" class="btn btn-block btn-success button">Aceptar</button>
+                            </div>
+                            <div class="col-lg-5">
+                                <button type="submit" class="btn btn-block btn-success button">
+                                    salir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 alert alert-warning  panel1">
+
                 </div>
             </div>
-            <div class="col-lg-3">
-                <img class="img-responsive" src="{{Imagen}}"> 
-            </div>
-
-            <div class=" col-lg-6 espaciolo">
-                <center>
-                    <center><strong><font color="black" face="Monotype" size="5" >{{Texto2}}</font></strong></center><br>
-                    <input ng-model="datos.usuario" type="Text" class="form-control C1" id="usuario" placeholder=" Nombre Usuario" required><br>
-                    <center><strong><font color="black" face="Monotype" size="5" >{{Texto3}}</font></strong></center><br>
-                    <input ng-model="datos.contrasena" type="password" class="form-control C1" id="exampleInputPassword1" placeholder="Ingrese Contraseña" required>
-
-                    <div class="alert alert-danger" style="margin-top: 40px;" ng-show="usuarioErroneo">
-                        Usuario inválido
-                    </div>
-                    <div class="col-l-6">
-                        <a href="#!/MenuPrincipal"><button type="button" class="btn btn-success btn-responsive btninter centrado button">Aceptar</button></a>
-                        <button type="button"  class="btn btn-success btn-responsive btninter right centrado button ">Salir</button> 
-                    </div>
-
-
-                </center>
-            </div>
-
-            <div class="col-lg-12 alert alert-warning  panel1">
-
-            </div> 
         </div>
     </div>
-</div>
+    <div class="alert alert-danger Mensa" style="margin-top: 20px;" ng-show="usuarioErroneo">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Usuario o Contraseña inválido
+    </div>
+</form>

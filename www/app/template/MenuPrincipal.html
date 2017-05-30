@@ -1,6 +1,5 @@
 <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 
-
 <div class="row">
     <div class="col-lg-12 panelMp">
         <center><h2 class="tituloMenuP">MENU PRINCIPAL</h2></center>
@@ -9,8 +8,8 @@
 
 <div class="row">
     <div class="col-lg-12 text-center">
-        <a href="#!/reportes"><button type="button" class=" btn btn-success btn-responsive btninter centrado buttonMenu">Reportes</button></a>
-        <a href="#!/AgUsuario"><button type="button"  class="btn btn-success btn-responsive btninter right centrado buttonMenu ">Agregar Nuevo Usuario</button></a>
+        <a ng-show="(rol == rolAdmin) ? true : false" href="#!/reportes"><button type="button" class=" btn btn-success btn-responsive btninter centrado buttonMenu">Reportes</button></a>
+        <a ng-show="(rol == rolAdmin) ? true : false" href="#!/AgUsuario"><button type="button"  class="btn btn-success btn-responsive btninter right centrado buttonMenu ">Agregar Nuevo Usuario</button></a>
         <a href="#!/registroAlumno"><button type="button" class=" btn btn-success btn-responsive btninter centrado buttonMenu">Agregar Nuevo Alumno</button></a>
         <a href="#!/controlEntrada"><button type="button"  class=" btn btn-success btn-responsive btninter right centrado buttonMenu ">Control de entrada</button></a> 
     </div>

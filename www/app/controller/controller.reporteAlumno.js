@@ -1,5 +1,4 @@
-angular.module ('Eintrag').
-        controller('reporteAlumnoController', ['$scope', function ($scope) {
+angular.module('Eintrag').controller('reporteAlumnoController', ['$scope', function ($scope) {
                 
             }]);
 
