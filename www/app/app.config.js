@@ -11,7 +11,7 @@ angular.module('Eintrag').config(['$middlewareProvider',
     function middlewareProviderConfig($middlewareProvider) {
         $middlewareProvider.map({
             'comprobarSession': ['$localStorage', '$sessionStorage', function comprobarSession($localStorage, $sessionStorage) {
-                   middlewareComprobarSession(this, $localStorage, $sessionStorage);
+                    middlewareComprobarSession(this, $localStorage, $sessionStorage);
                 }],
             'comprobarPermisoDeAdmnistracion': ['$sessionStorage', 'rolAdmin', function comprobarPermisoDeAdmnistracion($sessionStorage, rolAdmin) {
                     middlewareComprobarPermisoDeAdmnistracion(this, $sessionStorage, rolAdmin);
@@ -82,7 +82,13 @@ angular.module('Eintrag').config(['$routeProvider', '$httpProvider', function co
                     templateUrl: 'app/template/reporteFecha.html',
                     middleware: ['comprobarSession', 'comprobarPermisoDeAdmnistracion']
                 }).
-                otherwise('/');
+                when('/logout', {
+                    controller: 'logoutController',
+                    template: '<p>Cerrando Session...</p>',
+                    middleware: ['comprobarSession']
+                }).
+       
+        otherwise('/');
     }]);
 
 

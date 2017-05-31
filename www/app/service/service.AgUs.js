@@ -1,8 +1,14 @@
-angular.module('Eintrag').service('AgUsService', ['$http', function($http) {
-        this.getMyindex = $http.get('http://localhost/Eintrag/Server/AgUsuario.php');
+angular.module('Eintrag').service('AgUsService', ['$http', function ($http) {
 
-       
-       
-//        this.getMyInfo = $http.get('http://10.72.138.122/miApp2/server/index.php');
+        this.guardarUsuario = function (data) {
+//            console.log(data);
+            return $http.post('http://localhost/Eintrag/www/server.php/guardarUsuario', $.param(data));
+
+        };
+        
+        this.cargarTabla = $http.get('http://localhost/Eintrag/www/server.php/cargarTabla');
+        
     }]);
+
+
 

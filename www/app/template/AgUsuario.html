@@ -1,157 +1,159 @@
 
 <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+<form ng-submit="guardar()">
+    <div class="franja1">
+        <p class="titulo">Agregar Un Nuevo Usuario</p>
+    </div>
 
-<div class="franja1">
-    <p class="titulo">Agregar Un Nuevo Usuario</p>
-</div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
 
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
-
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-1 ">
-                <button class="btn btn-block btn-success">
-                    Nuevo
-                </button>
-            </div>
-            <div class="col-lg-2">
-                <button class="btn btn-block btn-success">
-                    Guardar
-                </button>
-            </div>
-            <div class="col-lg-2">
-                <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1 ">
+                    <button class="btn btn-block btn-success">
+                        Nuevo
+                    </button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-block btn-success">
+                        Guardar
+                    </button>
+                </div>
+                <div class="col-lg-2">
+                    <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
                         Cancelar
-                    </button> </a>
-            </div>
-            <div class="col-lg-2">
-                <button class="btn btn-block btn-success">
-                    Eliminar
-                </button>
-            </div>
-            <div class="col-lg-2">
-                <button class="btn btn-block btn-success">
-                    Editar
-                </button>
-            </div>
-        </div>
+                        </button></a>
 
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Nombre">
-                    </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Cedula">
-                    </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-block btn-success">
+                        Eliminar
+                    </button>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Dirección">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Tel_Fijo">
-                    </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-block btn-success">
+                        Editar
+                    </button>
                 </div>
             </div>
-            <div class="col-lg-5 ">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Celular">
+
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="datos.nombre" class="form-control" aria-label="..." placeholder="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
+                            </span>
+                            <input type="number" ng-model="datos.cedula" class="form-control" aria-label="..." placeholder="Cedula" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
+                            </span>
+                            <input type="text" ng-model="datos.direccion" class="form-control" aria-label="..." placeholder="Dirección" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
+                            </span>
+                            <input type="number" ng-model="datos.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo" required>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Correo">
+                <div class="col-lg-5 ">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="datos.celular" class="form-control" aria-label="..." placeholder="Celular" required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
-                        </span>
-                        <select class="form-control input-sm" aria-label="...">
-                            <option>Admin</option>
-                            <option>Invitado</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
+                            </span>
+                            <input type="email" ng-model="datos.correo" class="form-control" aria-label="..." placeholder="Correo" required>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Contraseña">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <select  ng-model="datos.rol"class="form-control input-sm" aria-label="...">
+
+                                <option value="">Seleccione un rol</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Invitado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
+                            </span>
+                            <input type="password"ng-model="datos.contrasena" class="form-control" aria-label="..." placeholder="Contraseña" required>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
-        <div class="table-responsive tabla">
-            <table class="table">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Cedula/TI</th>
-                    <th>Dirección</th>
-                    <th>Tel_Fijo</th>
-                    <th>Celular</th>
-                    <th>Correo</th>
-                    <th>Rol</th>
-                    <th>Contraseña</th>
-                               
-                </tr>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="table-responsive tabla">
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead> 
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cedula/TI</th>
+                        <th>Dirección</th>
+                        <th>Tel_Fijo</th>
+                        <th>Celular</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
 
-                <tr>
-                    <th>Juan sebastian</th>
-                    <th>11125479568</th>
-                    <th>Cra 2 # 8-12</th>
-                    <th>2152465</th>
-                    <th>3228967458</th>
-                    <th>juanse@misena.edu.co</th>
-                    <th>Admin</th>
-                    <th>********</th>
-                </tr>
-
-                <tr>
-                    <th>Santiaco </th>
-                    <th>11125479568</th>                    
-                    <th>Cra 2 # 8-12</th>
-                    <th>2152465</th>
-                    <th>3228967458</th>
-                    <th>SantiagoC@misena.edu.co</th>
-                    <th>Invitado</th>
-                    <th>*********</th>
-                </tr>
-            </table>
-            <nav aria-label="...">
-                <ul class="pager">
-                    <li class="previous disabled"><a href="#"><span aria-hidden="true">&Larr;</span>Anterior</a></li>
-                    <li class="next"><a href="#">Siguiente <span aria-hidden="true">&Rarr;</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>   
-</div>
-<div class="row">
-    <div class="col-lg-12 panelMp franja4">
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="x in tabla">
+                        <th>{{x.usu_nombre}}</th>
+                        <th>{{x.usu_cedula}}</th>
+                        <th>{{x.usu_direccion}}</th>
+                        <th>{{x.usu_telfijo}}</th>
+                        <th>{{x.usu_celular}}</th>
+                        <th>{{x.usu_correo}}</th>
+                        <th>{{x.rol_id}}</th>
+                        <th>********</th>
+                        <th><span title="Editar" class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
+ +              <span title="Eliminar" class="glyphicon glyphicon-trash" aria-hidden="true"></span></th>
+                    </tr>
+                     </tbody>
+                </table>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&Larr;</span>Anterior</a></li>
+                        <li class="next"><a href="#">Siguiente <span aria-hidden="true">&Rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>   
     </div>
-</div>
-
+    <div class="alert alert-success alert-dismissible Mensa" role="alert" ng-show="usuarioGuardado">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Usuario Guardado
+    </div>
+    <div class="row">
+        <div class="col-lg-12 panelMp franja4">
+        </div>
+    </div>    
+</form>

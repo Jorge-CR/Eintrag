@@ -11,14 +11,14 @@
     color: #006666;
     background: white !important;
     margin: auto;
-    height: 509px;
-    width: 610px;
+    height: 505px;
+    width: 605px;
     margin-top: 200px;
 }
 .panel1{
     border: 1px solid black !important;
     height: 70px;
-  
+
     background: green !important;
 
 
@@ -29,7 +29,7 @@
     margin-top: 0px;
     border: 1px solid black !important;
     height: 70px;
-  
+
     background: green !important;
 
 }
@@ -50,9 +50,9 @@
     margin-bottom: 36px;
 }
 .Mensa{
-    width: 250px;
-   text-align: center;
-   margin-left: 820px;
+    width: 280px;
+    text-align: center;
+    margin-left: 820px;
 }
 /*------------------------------------------/LOGIN------------------------------------------*/
 
@@ -107,6 +107,11 @@
     float: right;
     margin-top: 15px;
     margin-right: 10px;
+}
+.buttonM{
+    background: green !important;
+    border: 0px;
+    margin-top: 10px;
 }
 
 
@@ -271,11 +276,13 @@
     color: black;
     font-size: 52px;
     margin-left: 0px;
+
 }
 .Copy{
     color: black;
     font-size: 52px;
     margin-left: 0px;
+    margin-right: 40px;
 }
 .tituloacercade{
     font-size: 55px;

@@ -156,7 +156,7 @@ class usuario {
      * Obtiene el ROL del registro
      * @return integer
      */
-    public function getRol_id() {
+    public function getRolId() {
         return $this->rol_id;
     }
 
@@ -204,8 +204,8 @@ class usuario {
      * setea la contrasena del registro
      * @param type $contrasena
      */
-    public function setContrasena($contrasena) {
-        $this->contrasena = $contrasena;
+    public function setContrasena($contrasena, $hash) {
+        $this->contrasena = hash($hash, $contrasena, false);
     }
 
     /**

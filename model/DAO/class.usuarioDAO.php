@@ -11,7 +11,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function insert(\usuario $usuario) {
-        $sql = 'INSERT INTO r_usuario (usu_cedula,usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, usu_usuario, usu_contraseña, rol_id, usu_create_at) VALUES (:cedula, :foto, :nombre, :celular, :correo, :user, :pass, :rol_id, now())';
+        $sql = 'INSERT INTO r_usuario (usu_cedula,usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, usu_contraseña, rol_id, usu_created_at) VALUES (:cedula, :nombre, :direccion, :telfijo, :celular, :correo, :pass, :rol_id, now())';
         $params = array(
             ':cedula' => $usuario->getCedula(),
             ':nombre' => $usuario->getNombre(),
@@ -19,15 +19,14 @@ class usuarioDAO extends dataSource implements IUsuario {
             ':telfijo' => $usuario->getTelfijo(),
             ':celular' => $usuario->getCelular(),
             ':correo' => $usuario->getCorreo(),
-            ':user' => $usuario->getUsuario(),
             ':pass' => $usuario->getContrasena(),
-            ':rol_id' => $usuario->getRol_id(),
+            ':rol_id' => $usuario->getRolId(),
         );
         return $this->execute($sql, $params);
     }
 
     public function select() {
-        $sql = 'SELECT usu_cedula, usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, rol_id FROM r_usuario WHERE r_usuario';
+        $sql = 'SELECT usu_cedula, usu_nombre, usu_direccion, usu_telfijo, usu_celular, usu_correo, rol_id FROM r_usuario';
         return $this->query($sql);
     }
 
