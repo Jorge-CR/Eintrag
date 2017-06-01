@@ -111,7 +111,8 @@
 .buttonM{
     background: green !important;
     border: 0px;
-    margin-top: 10px;
+    margin-top: 15px;
+ 
 }
 
 
@@ -276,6 +277,8 @@
     color: black;
     font-size: 52px;
     margin-left: 0px;
+    float: right;
+    margin-top: -5px;
 
 }
 .Copy{
