@@ -1,15 +1,16 @@
 
 <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 <form ng-submit="guardar()">
+
     <div class="franja1">
         <p class="titulo">Agregar Un Nuevo Usuario <a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a></p>
     </div>
-
+        <!--Botones-->
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
 
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-1 ">
+                <div class="col-lg-2 col-lg-offset-3 ">
                     <button class="btn btn-block btn-success">
                         Nuevo
                     </button>
@@ -21,50 +22,42 @@
                 </div>
                 <div class="col-lg-2">
                     <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
-                        Cancelar
+                            Cancelar
                         </button></a>
 
                 </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-block btn-success">
-                        Eliminar
-                    </button>
-                </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-block btn-success">
-                        Editar
-                    </button>
-                </div>
+
+
             </div>
 
+            <!--Campos de texto en los ingresamos informacion-->
             <div class="row" style="margin-top: 30px;">
                 <div class="col-lg-5 col-lg-offset-1">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
                             </span>
-                            <input type="text" ng-model="datos.nombre" class="form-control" aria-label="..." placeholder="Nombre" required>
+                            <input type="text" ng-model="dataRegistrarUsuario.nombre" class="form-control" aria-label="..." placeholder="Nombre" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
                             </span>
-                            <input type="number" ng-model="datos.cedula" class="form-control" aria-label="..." placeholder="Cedula" required>
+                            <input type="number" ng-model="dataRegistrarUsuario.cedula" class="form-control" aria-label="..." placeholder="Cedula" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
                             </span>
-                            <input type="text" ng-model="datos.direccion" class="form-control" aria-label="..." placeholder="Dirección" required>
-                        </div>
-                    </div>
+                            <input type="text" ng-model="dataRegistrarUsuario.direccion" class="form-control" aria-label="..." placeholder="Dirección" required>
+                        </div>                    </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
                             </span>
-                            <input type="number" ng-model="datos.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo" required>
+                            <input type="number" ng-model="dataRegistrarUsuario.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo" required>
                         </div>
                     </div>
                 </div>
@@ -73,21 +66,21 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
                             </span>
-                            <input type="number" ng-model="datos.celular" class="form-control" aria-label="..." placeholder="Celular" required>
+                            <input type="number" ng-model="dataRegistrarUsuario.celular" class="form-control" aria-label="..." placeholder="Celular" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
                             </span>
-                            <input type="email" ng-model="datos.correo" class="form-control" aria-label="..." placeholder="Correo" required>
+                            <input type="email" ng-model="dataRegistrarUsuario.correo" class="form-control" aria-label="..." placeholder="Correo" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
                             </span>
-                            <select  ng-model="datos.rol"class="form-control input-sm" aria-label="...">
+                            <select  ng-model="dataRegistrarUsuario.rol"class="form-control input-sm" aria-label="...">
 
                                 <option value="">Seleccione un rol</option>
                                 <option value="1">Admin</option>
@@ -99,45 +92,49 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
                             </span>
-                            <input type="password"ng-model="datos.contrasena" class="form-control" aria-label="..." placeholder="Contraseña" required>
+                            <input type="password"ng-model="dataRegistrarUsuario.contrasena" class="form-control" aria-label="..." placeholder="Contraseña" required>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!--Tabla en la cual se cargan los Usuario (Insertado,Editados,Elimindos) -->
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
             <div class="table-responsive tabla">
-                <table class="table table-bordered table-condensed table-striped">
+                <table class="table">
                     <thead> 
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Cedula/TI</th>
-                        <th>Dirección</th>
-                        <th>Tel_Fijo</th>
-                        <th>Celular</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Contraseña</th>
-                        <th>Acciones</th>
+                        <tr>
+                      
+                            <th>Nombre</th>
+                            <th>Cedula/TI</th>
+                            <th>Dirección</th>
+                            <th>Tel_Fijo</th>
+                            <th>Celular</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
 
-                    </tr>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="x in tabla">
-                        <th>{{x.usu_nombre}}</th>
-                        <th>{{x.usu_cedula}}</th>
-                        <th>{{x.usu_direccion}}</th>
-                        <th>{{x.usu_telfijo}}</th>
-                        <th>{{x.usu_celular}}</th>
-                        <th>{{x.usu_correo}}</th>
-                        <th>{{x.rol_id}}</th>
-                        <th>********</th>
-                        <th><span title="Editar" class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
- +              <span title="Eliminar" class="glyphicon glyphicon-trash" aria-hidden="true"></span></th>
-                    </tr>
-                     </tbody>
+                        <tr ng-repeat="x in tabla">
+                         
+                            <th>{{x.usu_nombre}}</th>
+                            <th>{{x.usu_cedula}}</th>
+                            <th>{{x.usu_direccion}}</th>
+                            <th>{{x.usu_telfijo}}</th>
+                            <th>{{x.usu_celular}}</th>
+                            <th>{{x.usu_correo}}</th>
+                            <th>{{x.rol_id}}</th>
+
+                            <th><i ng-click="editar(x)" title="Editar" class="glyphicon glyphicon-edit" aria-hidden="true"></i> 
+                                <i ng-click="eliminar(x)" title="Eliminar" class="glyphicon glyphicon-trash"></i>
+                        </tr>
+                    </tbody>
                 </table>
                 <nav aria-label="...">
                     <ul class="pager">
@@ -148,12 +145,132 @@
             </div>
         </div>   
     </div>
+
+    <!--Mensaje Insertar usuario -->
     <div class="alert alert-success alert-dismissible Mensa" role="alert" ng-show="usuarioGuardado">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         Usuario Guardado
     </div>
-    <div class="row">
-        <div class="col-lg-12 panelMp franja4">
+
+    
+<!--     MODAL EDITAR USUARIO   
+<div class="modal fade bs-example-modal-sm" tabindex="-1" id="editarUsuario" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil"></i>
+                    Editar Usuario</h4>
+            </div>
+            <div class="modal-body">
+                <form ng-submit="submitEditarUsuario()">
+                    <div class="alert alert-success" ng-show="usuarioEditado">
+                        <center>Usuario Editado Con Exito</center>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i>
+                                </span>
+                                <input type="text" class="form-control" ng-model="edit.id" aria-label="..." readonly placeholder="id">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user-secret iconoForm"></i>
+                            </span>
+                            <input ng-model="edit.nombre" type="text" class="form-control" aria-label="..." placeholder="NOMBRE" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user-secret iconoForm"></i>
+                            </span>
+                            <input type="number" ng-model="edit.cedula" class="form-control" aria-label="..." placeholder="Cedula" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock iconoForm3"></i>
+                            </span>
+                            <input type="text" ng-model="edit.direccion" class="form-control" aria-label="..." placeholder="Dirección" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-unlock-alt iconoForm3"></i>
+                            </span>
+                            <input type="number" ng-model="edit.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo" required>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock iconoForm3"></i>
+                            </span>
+                            <input type="text" ng-model="edit.celular" class="form-control" aria-label="..." placeholder="celular" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-unlock-alt iconoForm3"></i>
+                            </span>
+                            <input type="email" ng-model="edit.correo" class="form-control" aria-label="..." placeholder="correo" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users"></i>
+                            </span>
+                            <select class="form-control input-sm" ng-model="edit.rolid" aria-label="...">
+                                <option value="1">USUARIO</option>
+                                <option value="2">ADMIN</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-unlock-alt iconoForm3"></i>
+                            </span>
+                            <input type="password" ng-model="edit.contrasena" class="form-control" aria-label="..." placeholder="contraseña" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-sm">Editar Usuario</button>
+
+                </form>
+            </div>
         </div>
-    </div>    
+    </div>
+</div>-->
+
+
+    <!-- MODAL ELIMINAr Usuario-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="eliminarUsuario" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-trash"></i>
+                        Eliminar Usuario</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" ng-show="usuarioEliminado">
+                        <center>Usuario Eliminado</center>
+                    </div>
+                    <center>
+                        <h4>Esta seguro?</h4>
+                        <p>Se va a eliminar el Usuario</p>
+                        <h3>{{nombre}}</h3>
+                    </center>
+                    <button ng-click="submitEliminarUsuario()" type="button" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 panelMp">
+        </div>
+    </div>  
+
 </form>

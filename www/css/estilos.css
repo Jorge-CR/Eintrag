@@ -4,21 +4,14 @@
 /*------------------------------------------LOGIN------------------------------------------*/
 
 .contenedor6{
-    padding-top: 0px;
-    padding-right: 0px;     
-    border: 3px solid black !important ;
-    margin: 000000;
-    color: #006666;
-    background: white !important;
-    margin: auto;
-    height: 505px;
-    width: 605px;
-    margin-top: 200px;
+    border: solid 2px black;
+    margin-top: 100px;
+    padding-top: 15px;
 }
 .panel1{
     border: 1px solid black !important;
     height: 70px;
-
+    width: 100%;
     background: green !important;
 
 
@@ -27,6 +20,7 @@
     text-align: center;
     padding-top: 0px;
     margin-top: 0px;
+    width: 100%;
     border: 1px solid black !important;
     height: 70px;
 
