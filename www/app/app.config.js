@@ -57,6 +57,11 @@ angular.module('Eintrag').config(['$routeProvider', '$httpProvider', function co
                     templateUrl: 'app/template/registroAlumno.html',
                     middleware: ['comprobarSession']
                 }).
+                when('/EditarUsuario', {
+                    controller: 'editarController',
+                    templateUrl: 'app/template/EditarUsuario.html',
+                    middleware: ['comprobarSession']
+                }).
                 when('/controlEntrada', {
                     controller: 'controlEntradaController',
                     templateUrl: 'app/template/controlEntrada.html',
@@ -87,8 +92,7 @@ angular.module('Eintrag').config(['$routeProvider', '$httpProvider', function co
                     template: '<p>Cerrando Session...</p>',
                     middleware: ['comprobarSession']
                 }).
-       
-        otherwise('/');
+                otherwise('/');
     }]);
 
 

@@ -12,9 +12,8 @@ class editarUsuario extends controllerExtends {
             $usuario->setDireccion($request->getParam('direccion'));
             $usuario->setTelfijo($request->getParam('telfijo'));
             $usuario->setCelular($request->getParam('celular'));
-            $usuario->setRol_id($request->getParam('rol'));
+            $usuario->setRol_id($request->getParam('rolid'));
             $usuario->setCorreo($request->getParam('correo'));
-            $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
             $usuario->setId($request->getParam('id'));
 
             $usuarioDAO = new usuarioDAOExt($this->getConfig());

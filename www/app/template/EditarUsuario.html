@@ -1,0 +1,99 @@
+
+<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    <div class="franja1">
+        <p class="titulo">Editar Usuario <a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a></p>
+    </div>
+    <!--Botones-->
+    <div class="row">
+           <div class="col-lg-10 col-lg-offset-1">
+                <div class="page-header">
+                    <h1><small class="glyphicon glyphicon-pencil"></small> Editar Usuario<a href="#!/inicio"><small class="glyphicon glyphicon-menu-right" style="float: right"></small></a></h1>
+                </div>
+        <form ng-submit="submitEditarContacto()">
+            <div class="row">
+                <div class="col-lg-3 col-lg-offset-4 tex1">
+                    <div class="alert alert-success" ng-show="UsuarioEditado">
+                        <center>Usuario Editado Con Exito</center>
+                    </div>
+                    <div class="form-group" hidden>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input ng-model="edit.id" type="text" class="form-control" aria-label="..." placeholder="ID" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input ng-model="edit.nombre" type="text" class="form-control" aria-label="..." placeholder="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
+                            </span>
+                            <input type="number" ng-model="edit.cedula" class="form-control" aria-label="..." placeholder="Cedula" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
+                            </span>
+                            <input type="text" ng-model="edit.direccion" class="form-control" aria-label="..." placeholder="Dirección" required>
+                        </div>                    
+                    </div>                     
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i>
+                            </span>
+                            <input ng-model="edit.telfijo" type="text" class="form-control" aria-label="..." placeholder="Tel_Fijo" required>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="edit.celular" class="form-control" aria-label="..." placeholder="Celular" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i>
+                            </span>
+                            <input ng-model="edit.correo" type="text" class="form-control" aria-label="..." placeholder="Correo" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <select  ng-model="edit.rolid"class="form-control input-sm" aria-label="...">
+
+                                <option value="">Seleccione un rol</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Invitado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-lg-offset-4"> 
+                <div class="col-lg-1">
+                    <button type="submit" class="btn btn-default btn-block buttonE" title="Editar">Editar</button>
+                </div>
+                <div class="col-lg-1">
+                    <button type="reset" class="btn btn-default btn-block buttonE" title="Limpiar">limpiar</button>
+                </div>
+                <div class="col-lg-1">
+                    <a href="#!/AgUsuario" class="btn btn-default btn-bloc buttonE" title="Cancelar">cancelar</a>
+                </div>
+            </div>
+        </form>  
+    </div>
+        <div class="row">
+        <div class="col-lg-12 panelMp">
+        </div>
+    </div> 
+</div>

@@ -47,18 +47,17 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function update(\usuario $usuario) {
-        $sql = 'UPDATE r_usuario SET usu_cedula = :cedula, usu_nombre = :nombre, usu_direccion = :direccion, usu_telfijo = :telfijo, usu_celular = :celular, usu_correo = :correo, usu_contrasena = :pass WHERE usu_id = :id';
+        $sql = 'UPDATE r_usuario SET usu_cedula = :cedula, usu_nombre = :nombre, usu_direccion = :direccion, usu_telfijo = :telfijo, usu_celular = :celular, usu_correo = :correo, rol_id = :rolid WHERE usu_id = :id';
         $params = array(
-            ':cedula' => $usuario->getCedula(),
+            ':cedula' =>$usuario->getCedula(),
             ':nombre' => $usuario->getNombre(),
             ':direccion' => $usuario->getDireccion(),
             ':telfijo' => $usuario ->getTelfijo(),
             ':celular' => $usuario->getCelular(),
             ':correo' => $usuario->getCorreo(),
-            ':contrasena' => $usuario->getContrasena(),
-            ':user' => $usuario->getUsuario(),
-            ':pass' => $usuario->getContrasena(),
-            ':id' => $usuario->getId()
+            ':id' => $usuario->getId(),
+            ':rolid' => $usuario->getRolId()
+                
         );
         return $this->execute($sql, $params);
     }
