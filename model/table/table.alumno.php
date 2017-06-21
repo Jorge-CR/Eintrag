@@ -1,7 +1,7 @@
 <?php
 
 class r_persona {
-    
+
     private $id;
     private $cedula;
     private $nombre;
@@ -18,7 +18,7 @@ class r_persona {
     private $updated_at;
     private $created_at;
     private $deleted_at;
-    
+
     function getId() {
         return $this->id;
     }
@@ -146,8 +146,5 @@ class r_persona {
     function setDeleted_at($deleted_at) {
         $this->deleted_at = $deleted_at;
     }
-  
-    
-    
-}
 
+}

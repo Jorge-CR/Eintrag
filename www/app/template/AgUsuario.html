@@ -1,14 +1,16 @@
 
 <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 <form ng-submit="guardar()">
-
-    <div class="franja1">
-        <p class="titulo">Agregar Un Nuevo Usuario <a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a></p>
+  <div class="row">
+    <div class="panelMp">
+        <div class="col-lg-12">
+            <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Agregar Nuevo Usuario</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+        </div>
     </div>
+  </div>
     <!--Botones-->
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
-
             <div class="row">
                 <div class="col-lg-2 col-lg-offset-3 ">
                     <button class="btn btn-block btn-success">
@@ -24,10 +26,7 @@
                     <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
                             Cancelar
                         </button></a>
-
                 </div>
-
-
             </div>
 
             <!--Campos de texto en los ingresamos informacion-->
@@ -152,116 +151,7 @@
         Usuario Guardado
     </div>
 
-    <!--MODAL EDITAR USUARIO   
-    --><div class="modal fade bs-example-modal-lg" tabindex="-1" id="editarUsuario" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-pencil"></i>
-                        Editar Usuario</h4>
-                </div>
-                <div class="modal-body">
-                    <form ng-submit="submitEditarUsuario()">
-                        <div class="alert alert-success" ng-show="usuarioEditado">
-                            <center>Usuario Editado Con Exito</center>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">DATOS PERSONALES</div>
-                                    <div class="panel-body">
-                                        <div class="form-group" hidden>
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.id" aria-label="..." readonly placeholder="id">
-                                            </div>
-                                        </div>
-                                          <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-user-circle-o"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.nombre" aria-label="..." placeholder="NOMBRE">
-                                            </div>
-                                        </div>
-                                           <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.cedula" aria-label="..." placeholder="CEDULA" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-user iconoForm"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.direccion" aria-label="..." placeholder="DIRECCION">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-mobile iconoForm2"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.telefono" aria-label="..." placeholder="TELEFONO">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">DATOS DEL USUARIO</div>
-                                    <div class="panel-body">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-mobile iconoForm"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.celular" aria-label="..." placeholder="CELULAR">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-lock iconoForm3"></i>
-                                                </span>
-                                                <input type="text" class="form-control" ng-model="edit.correo" aria-label="..." placeholder="CORREO">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-unlock-alt iconoForm3"></i>
-                                                </span>
-                                                <input type="password" class="form-control" ng-model="edit.contrasena" aria-label="..." placeholder="Contraseña">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-users"></i>
-                                                </span>
-                                                <select class="form-control input-sm" ng-model="edit.rol" aria-label="...">
-                                                    <option value="">Seleccione un rol</option>
-                                                    <option value="1">ADMIN</option>
-                                                    <option value="2">INVITADO</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-lg-offset-3">
-                                <button type="submit" class="btn btn-success btn-block btn-sm">Editar Usuario</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div><!--
-    
-    
+  
     
     <!-- MODAL ELIMINAr Usuario-->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" id="eliminarUsuario" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -287,7 +177,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-12 panelMp">
+        <div class=" panelMp">
+            <div class="col-lg-12">
+                <p class="col-lg-offset-4 letraf">Institucion Educativa Ramon Martinez Benitez</p>
+            </div>
         </div>
     </div>  
 

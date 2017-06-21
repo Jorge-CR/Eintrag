@@ -1,8 +1,8 @@
-
-<div class="franja1">
-    <p class="titulo">Control de Entrada y Salida <a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a></p>
+<div class="row">
+    <div class="franja1">
+        <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Control de Entrada y Salida</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+    </div>
 </div>
-
 <div class="row">
     <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal1 text-center">
 
@@ -29,7 +29,7 @@
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
                         </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Cedula">
+                        <input type="number" class="form-control" aria-label="..." placeholder="Tipo de documento">
                     </div>
                 </div>
             </div> 
@@ -83,12 +83,26 @@
                     </div>
                 </div>
             </div> 
-           
 
+            <!--Mensaje Entrada Valida -->
+            <div class="col-lg-2 col-lg-offset-5">
+                <div class="alert alert-success alert-dismissible Mensa1" role="alert" ng-show="true">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    Entrada Valida
+                </div>
+                <!--Mensaje Entrada invalida -->
+                <div class="alert alert-danger alert-dismissible Mensa1" role="alert" ng-show="true">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    Entrada Invalida
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-12 panelMp franja2">
+    <div class="panelMp franja2">
+        <div class="col-lg-12">
+            <p class="col-lg-offset-4 letraf">Institucion Educativa Ramon Martinez Benitez</p>
+        </div>
     </div>
-</div>
+</div>  

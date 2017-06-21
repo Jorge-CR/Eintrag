@@ -28,7 +28,14 @@ angular.module('Eintrag').controller('AgUsController', ['$scope', 'AgUsService',
                     $scope.dataRegistrarUsuario = '';
                     console.log(answer);
                     $scope.tabla = answer.data.datos;
+                      $timeout(function () {
+                    }, 700);
+                    $timeout(function () {
+                        // $route.reload();
+                        window.location.reload();
+                    }, 1000);
 //                    console.log("INSERTO");
+                    
 
                 }
 

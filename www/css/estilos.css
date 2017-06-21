@@ -87,8 +87,8 @@
 }
 .campologom{
     margin-top:50px;
-    margin-right:0px;
-    width:450px; 
+    margin-right: 55px;
+    width:400px; 
     height:350px;
     padding-right: 0px;
     margin-bottom: 70px;
@@ -96,6 +96,7 @@
 .textoPie {
     font-size: 20px;
     text-align: center;
+    margin-bottom: 25px;
 }
 .linkCopiR{
     float: right;
@@ -106,7 +107,7 @@
     background: green !important;
     border: 0px;
     margin-top: 15px;
- 
+
 }
 
 
@@ -197,24 +198,41 @@
     margin-top: 145px;
 }
 .buttonE{
-    margin-bottom: 25PX;
+    margin-bottom: 45PX;
+    margin-top: 15px;
+    
 }
 .tex1{
     margin-top: 25px;
 }
-
+.letraE{
+    color:black ;
+   font-size: 35px;
+   font-variant: historical-forms;
+}
+.letraf{
+    color:black ;
+   font-size: 30px;
+   font-variant: historical-forms;
+   margin-top: 20px;
+   
+}
+.iconoError{
+    margin-right: 10px;
+}
 /*------------------------------------------CopyRight------------------------------------------*/
 
 
 .contenedor2{
     padding-top: 0px;
     padding-right: 0px;
-    border: 3px solid black !important ;
-    margin: 000000;
-    color: #006666;
-    background: white !important;
-    height: 525px;
+    border: 1px solid black;
+    background: white;
+    height: 545px;
     width: 1220px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+   
 
 
 }    
@@ -244,9 +262,7 @@
 }
 .campologo{
     margin-top: 60px;
-    width:150px; 
-    height:136px;
-    margin-left: 35px;
+
 }
 .campologo2{
     margin-top:0px;
@@ -258,9 +274,6 @@
 }
 .letra{
     font-size: 17px;
-    margin-top: 0px;
-    margin-right: 0px;
-
 }
 .letra1{
     font-size: 17px;
@@ -268,12 +281,20 @@
 }
 .letra2{
     font-size: 17px;
-    margin-left: 70px;
+/*    margin-left: 70px;*/
 }
 .espacio{
     margin-top: 250px;
 }
 .salir{
+    color: black;
+    font-size: 52px;
+    margin-left: 0px;
+    float: right;
+    margin-top: 15px;
+
+}
+.cerrarsession{
     color: black;
     font-size: 52px;
     margin-left: 0px;
@@ -290,5 +311,28 @@
 .tituloacercade{
     font-size: 55px;
 }
+.panelM{
+
+    border: 1px solid black !important;
+    height: 90px;
+    width: 100%;
+    background: green !important;
+    margin-bottom: 25px;
+
+}
+.panelc{
+
+    border: 1px solid black;
+    background-color: white;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+
+}
 /*------------------------------------------/CopyRight------------------------------------------*/
 
+/*-----------------------------------------/controlEntrada--------------------------------------*/
+.Mensa1{
+
+}
+/*-----------------------------------------/controlEntrada--------------------------------------*/
