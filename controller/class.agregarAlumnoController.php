@@ -7,14 +7,20 @@ class agregarAlumno extends controllerExtended {
       $this->loadTablealumno();
 
       $alumno = new alumno();
-      $alumno->setCedula($request->getParam('cedula'));
-      $alumno->setNombre($request->getParam('nombre'));
-      $alumno->setApellido($request->getParam('apellido'));
-      $alumno->setCategoria($request->getParam('categoria'));
-      $alumno->setTelefono($request->getParam('telefono'));
-      $alumno->setDireccion($request->getParam('direccion'));
-      $alumno->setCorreo($request->getParam('correo'));
+      $alumno->setcedula($request->getParam('cedula'));
+      $alumno->setnombre($request->getParam('nombre'));
+      $alumno->setapellidos($request->getParam('apellidos'));
+      $alumno->setgenero($request->getParam('genero'));
+      $alumno->setdireccion($request->getParam('direccion'));
+      $alumno->settel_fijo($request->getParam('telfijo'));
+      $alumno->setcelular($request->getParam('celular'));
+      $alumno->setcorreo($request->getParam('correo'));
+      $alumno->setrh($request->getParam('rh'));
+      $alumno->setacudiente($request->getParam('acudiente'));
+      $alumno->setcelacu($request->getParam('celacu'));
+      $alumno->setgrado($request->getParam('grado'));
 
+      
       $alumnoDAO = new alumnoDAOExt($this->getConfig());
       $respuesta1 = $alumnoDAO->insert($alumno);
       $respuesta2 = array(
@@ -37,3 +43,6 @@ class agregarAlumno extends controllerExtended {
   }
 
 }
+
+
+

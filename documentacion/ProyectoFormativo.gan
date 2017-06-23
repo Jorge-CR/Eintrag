@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="ProyectoFormativo" company="" webLink="http://" view-date="2017-03-20" view-index="0" gantt-divider-location="845" resource-divider-location="300" version="2.8.1" locale="es_CO">
+<?xml version="1.0" encoding="UTF-8"?><project name="ProyectoFormativo" company="" webLink="http://" view-date="2017-03-20" view-index="0" gantt-divider-location="548" resource-divider-location="300" version="2.8.1" locale="es">
     <description/>
-    <view zooming-state="default:4" id="gantt-chart">
-        <field id="tpd10" name="ID" width="63" order="0"/>
-        <field id="tpd3" name="Nombre" width="297" order="1"/>
-        <field id="tpd4" name="Fecha de inicio" width="77" order="2"/>
-        <field id="tpd5" name="Fecha de fin" width="77" order="3"/>
-        <field id="tpd7" name="Progreso" width="45" order="4"/>
-        <field id="tpd9" name="Antecesores" width="92" order="5"/>
-        <field id="tpd13" name="Recursos" width="190" order="6"/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd10" name="ID" width="44" order="0"/>
+        <field id="tpd3" name="Nombre" width="183" order="1"/>
+        <field id="tpd4" name="Fecha de inicio" width="52" order="2"/>
+        <field id="tpd5" name="Fecha de fin" width="52" order="3"/>
+        <field id="tpd7" name="Progreso" width="33" order="4"/>
+        <field id="tpd9" name="Antecesores" width="61" order="5"/>
+        <field id="tpd13" name="Recursos" width="119" order="6"/>
         <timeline><![CDATA[64]]></timeline>
     </view>
     <view id="resource-table">

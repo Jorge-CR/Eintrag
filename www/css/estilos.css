@@ -220,6 +220,13 @@
 .iconoError{
     margin-right: 10px;
 }
+.parrafoError{
+    color: red;
+    font-family: Berlin Sans FB;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
 /*------------------------------------------CopyRight------------------------------------------*/
 
 

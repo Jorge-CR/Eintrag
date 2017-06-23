@@ -3,7 +3,7 @@ angular.module('Eintrag').controller('registroAlumnoController', ['$scope', 'reg
         $scope.dataRegistrarAlumno = {
 
             nombre: '',
-            apellido: '',
+            apellidos: '',
             cedula: '',
             genero: '',
             direccion: '',
@@ -16,9 +16,11 @@ angular.module('Eintrag').controller('registroAlumnoController', ['$scope', 'reg
             celular_acudiente: '',
             acciones: ''
         };
+        cargarTabla();
+        $scope.alumnoGuardado = false;
 
 
-$scope.submit = function () {
+$scope.guardarA = function () {
             agregarAlumno.agregarAlu($scope.dataRegistrarAlumno).then(function successCallback(response) {
                 $scope.alumnoRegistrado = false;
                 $scope.dataRegistrarUsuario = {};
@@ -30,6 +32,30 @@ $scope.submit = function () {
             }, function errorCallback(response) {
                 console.error(response);
             });
+        };
+        
+        $scope.submitEliminarAlumno = function () {
+            guardarAlumno.eliminarAlumno({id: $scope.ideliminar}).then(function successCallback(response) {
+                $scope.alumnoEliminado = false;
+                if (response.data.codigo == 500) {
+                } else {
+                    $scope.alumnoEliminado = true;
+                    $timeout(function () {
+                        $('#eliminarAlumno').modal('toggle');
+                    }, 700);
+                    $timeout(function () {
+                        // $route.reload();
+                        window.location.reload();
+                    }, 1000);
+                }
+            }, function errorCallback(response) {
+                console.error(response);
+            });
+        };
+        $scope.editar = function (x) {
+            $sessionStorage.datos = x;
+            $location.path('/EditarAlumno');
+
         };
         
     }]);

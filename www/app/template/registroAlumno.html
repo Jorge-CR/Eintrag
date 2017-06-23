@@ -1,194 +1,254 @@
-<div class="row">
-<div class="franja1">
-    <div class="col-lg-12">
-        <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Agregar Nuevo Alumno</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+<link href="css/estiloRegistroAlumno.css" rel="stylesheet" type="text/css"/>
+<form ng-submit="guardarA()">
+    <div class="row">
+        <div class="franja1">
+            <div class="col-lg-12">
+                <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Agregar Nuevo Alumno</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+            </div>
+        </div>  
     </div>
-</div>  
-</div>
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
+    <!--Botones-->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
 
-        <div class="row">
-            <div class="col-lg-2 col-lg-offset-3 ">
-                <button class="btn btn-block btn-success">
-                    Nuevo
-                </button>
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-3 ">
+                    <button class="btn btn-block btn-success">
+                        Nuevo
+                    </button>
+                </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-block btn-success">
+                        Guardar
+                    </button>
+                </div>
+                <div class="col-lg-2">
+                    <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
+                            Cancelar
+                        </button> </a>
+                </div>
             </div>
-            <div class="col-lg-2">
-                <button class="btn btn-block btn-success">
-                    Guardar
-                </button>
+
+            <!--Campos de texto en los que ingresamos informacion-->
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.nombre" class="form-control" aria-label="..." placeholder="Nombre">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="dataRegistrarAlumno.celular" class="form-control" aria-label="..." placeholder="Celular">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.apellidos" class="form-control" aria-label="..." placeholder="Apellido">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
+                            </span>
+                            <input type="email" ng-model="dataRegistrarAlumno.correo"class="form-control" aria-label="..." placeholder="Correo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
+                            </span>
+                            <input type="number" ng-model="dataRegistrarAlumno.cedula"class="form-control" aria-label="..." placeholder="Cedula">
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.rh" class="form-control" aria-label="..." placeholder="RH">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-venus-mars"></i> 
+                            </span>
+                            <select ng-model="dataRegistrarAlumno.genero" class="form-control input-sm" aria-label="...">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-graduation-cap"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.grado" class="form-control" aria-label="..." placeholder="Grado">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.direccion" class="form-control" aria-label="..." placeholder="Dirección">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="dataRegistrarAlumno.nombre_acudiente" class="form-control" aria-label="..." placeholder="Nombre de Acudiente">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
+                            </span>
+                            <input type="number" ng-model="dataRegistrarAlumno.tel_fijo" class="form-control" aria-label="..." placeholder="Tel_Fijo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="dataRegistrarAlumno.celular_acudiente" class="form-control" aria-label="..." placeholder="Celular Acudiente">
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-lg-2">
-                <a href="#!/MenuPrincipal"><button class="btn btn-block btn-success">
-                        Cancelar
-                    </button> </a>
-            </div>
+
         </div>
-
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Nombre">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Celular">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Apellido">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Correo">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Cedula">
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="RH">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-venus-mars"></i> 
-                        </span>
-                        <select class="form-control input-sm" aria-label="...">
-                            <option>Masculino</option>
-                            <option>Femenino</option>
-                        </select>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-graduation-cap"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Grado">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Dirección">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Nombre de Acudiente">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-lg-offset-1">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Tel_Fijo">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5">
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
-                        </span>
-                        <input type="text" class="form-control" aria-label="..." placeholder="Celular Acudiente">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
-        <div class="table-responsive tabla">
-            <table class="table">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Cedula/TI</th>
-                    <th>Genero</th>
-                    <th>Dirección</th>
-                    <th>Tel_Fijo</th>
-                    <th>Celular</th>
-                    <th>Correo</th>
-                    <th>RH</th>
-                    <th>Grado</th>
-                    <th>Nombre Acudiente</th>
-                    <th>Celular Acudiente</th>               
-                    <th>Acciones</th>               
-                </tr>
 
-            </table>
-            <nav aria-label="...">
-                <ul class="pager">
-                    <li class="previous disabled"><a href=""><span aria-hidden="true">&Larr;</span>Anterior</a></li>
-                    <li class="next"><a href="">Siguiente <span aria-hidden="true">&Rarr;</span></a></li>
-                </ul>
-            </nav>
+    <!--Tabla en la cual se cargan los Usuario (Insertado,Editados,Elimindos) -->
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="table-responsive tabla">
+                <table class="table">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cedula/TI</th>
+                        <th>Genero</th>
+                        <th>Dirección</th>
+                        <th>Tel_Fijo</th>
+                        <th>Celular</th>
+                        <th>Correo</th>
+                        <th>RH</th>
+                        <th>Grado</th>
+                        <th>Nombre Acudiente</th>
+                        <th>Celular Acudiente</th>               
+                        <th>Acciones</th>               
+                    </tr>
+                    <tbody>
+                        <tr ng-repeat="x in tabla">
+
+                            <th>{{x.per_cedula}}</th>
+                            <th>{{x.per_nombre}}</th>
+                            <th>{{x.per_apellidos}}</th>                            
+                            <th>{{x.per_genero}}</th>
+                            <th>{{x.per_direccion}}</th>
+                            <th>{{x.per_telfijo}}</th>
+                            <th>{{x.per_celular}}</th>
+                            <th>{{x.per_correo}}</th>
+                            <th>{{x.per_rh}}</th>                            
+                            <th>{{x.per_acudiente}}</th>
+                            <th>{{x.per_celau}}</th>
+                            <th>{{x.per_grado}}</th>
+
+
+                            <th><i ng-click="editar(x)" title="Editar" class="glyphicon glyphicon-edit" aria-hidden="true"></i> 
+                                <i ng-click="eliminar(x)" title="Eliminar" class="glyphicon glyphicon-trash"></i>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous disabled"><a href=""><span aria-hidden="true">&Larr;</span>Anterior</a></li>
+                        <li class="next"><a href="">Siguiente <span aria-hidden="true">&Rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>   
+    </div>
+
+    <!--Mensaje Insertar usuario -->
+    <div class="alert alert-success alert-dismissible Mensa" role="alert" ng-show="alumnoGuardado">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Alumno Guardado
+    </div>
+
+    <!-- MODAL ELIMINAr Usuario-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="eliminarAlumno" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-trash"></i>
+                        Eliminar Alumno</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" ng-show="alumnoEliminado">
+                        <center>Alumno Eliminado</center>
+                    </div>
+                    <center>
+                        <h4>Esta seguro?</h4>
+                        <p>Se va a eliminar el Usuario</p>
+                        <h3>{{nombre}}</h3>
+                    </center>
+                    <button ng-click="submitEliminarAlumno()" type="button" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+                </div>
+            </div>
         </div>
-    </div>   
-</div>
- <div class="row">
+    </div>
+
+    <div class="row">
         <div class=" panelMp franja4">
             <div class="col-lg-12">
                 <p class="col-lg-offset-4 letraf">Institucion Educativa Ramon Martinez Benitez</p>
             </div>
         </div>
     </div>  
+</form>
 
