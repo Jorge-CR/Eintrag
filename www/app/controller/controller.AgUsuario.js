@@ -10,9 +10,10 @@ angular.module('Eintrag').controller('AgUsController', ['$scope', 'AgUsService',
             contrasena: '',
             rol: ''
         };
+        $scope.modeloSoloLetras = '^[a-zA-Z ]+$';
         cargarTabla();
         $scope.usuarioGuardado = false;
-   
+       
 
 //      $scope.datos = {};
 

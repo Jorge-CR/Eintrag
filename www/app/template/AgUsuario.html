@@ -1,13 +1,13 @@
 
 <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
 <form ng-submit="guardar()">
-  <div class="row">
-    <div class="panelMp">
-        <div class="col-lg-12">
-            <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Agregar Nuevo Usuario</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+    <div class="row">
+        <div class="panelMp">
+            <div class="col-lg-12">
+                <font  class="col-lg-offset-4 tituloacercade" color="black" face="Monotype"  >Agregar Nuevo Usuario</font><a href="#!/MenuPrincipal"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+            </div>
         </div>
     </div>
-  </div>
     <!--Botones-->
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 contenedorPrincipal">
@@ -36,8 +36,11 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
                             </span>
-                            <input type="text" ng-model="dataRegistrarUsuario.nombre" class="form-control" aria-label="..." placeholder="Nombre" required>
+                            <input type="text" ng-model="dataRegistrarUsuario.nombre" ng-trim="true" ng-pattern="{{modeloSoloLetras}}" class="form-control" aria-label="..." placeholder="Nombre" >
                         </div>
+                        <p ng-show="dataRegistrarUsuario.nombre == null" class="parrafoError">
+                            <i class="glyphicon glyphicon-exclamation-sign iconoError"></i>El dato digitado NO es valido
+                        </p>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
@@ -79,7 +82,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
                             </span>
-                            <select  ng-model="dataRegistrarUsuario.rol"class="form-control input-sm" aria-label="...">
+                            <select  ng-model="dataRegistrarUsuario.rol" class="form-control input-sm" aria-label="...">
 
                                 <option value="">Seleccione un rol</option>
                                 <option value="1">Admin</option>
@@ -151,8 +154,8 @@
         Usuario Guardado
     </div>
 
-  
-    
+
+
     <!-- MODAL ELIMINAr Usuario-->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" id="eliminarUsuario" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm" role="document">
