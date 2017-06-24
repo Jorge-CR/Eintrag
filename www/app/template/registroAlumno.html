@@ -18,7 +18,7 @@
                     </button>
                 </div>
                 <div class="col-lg-2">
-                    <button class="btn btn-block btn-success">
+                    <button type="submit" class="btn btn-block btn-success">
                         Guardar
                     </button>
                 </div>
@@ -97,7 +97,8 @@
                             <span class="input-group-addon"><i class="fa fa-venus-mars"></i> 
                             </span>
                             <select ng-model="dataRegistrarAlumno.genero" class="form-control input-sm" aria-label="...">
-                                <option>Masculino</option>
+                                <option value="">Seleccione genero</option>
+                                <option >Masculino</option>
                                 <option>Femenino</option>
                             </select>
                         </div>
@@ -129,7 +130,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
                             </span>
-                            <input type="text" ng-model="dataRegistrarAlumno.nombre_acudiente" class="form-control" aria-label="..." placeholder="Nombre de Acudiente">
+                            <input type="text" ng-model="dataRegistrarAlumno.acudiente" class="form-control" aria-label="..." placeholder="Nombre de Acudiente">
                         </div>
                     </div>
                 </div>
@@ -139,7 +140,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
                             </span>
-                            <input type="number" ng-model="dataRegistrarAlumno.tel_fijo" class="form-control" aria-label="..." placeholder="Tel_Fijo">
+                            <input type="number" ng-model="dataRegistrarAlumno.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo">
                         </div>
                     </div>
                 </div>
@@ -149,7 +150,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
                             </span>
-                            <input type="number" ng-model="dataRegistrarAlumno.celular_acudiente" class="form-control" aria-label="..." placeholder="Celular Acudiente">
+                            <input type="number" ng-model="dataRegistrarAlumno.celacu" class="form-control" aria-label="..." placeholder="Celular Acudiente">
                         </div>
                     </div>
                 </div>
@@ -219,7 +220,7 @@
         Alumno Guardado
     </div>
 
-    <!-- MODAL ELIMINAr Usuario-->
+    <!-- MODAL ELIMINAR ALUMNO-->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" id="eliminarAlumno" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">

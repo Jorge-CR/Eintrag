@@ -1,6 +1,6 @@
 <?php
 
-class agregarAlumno extends controllerExtended {
+class agregarAlumno extends controllerExtends {
 
   public function main(\request $request) {
     try {
@@ -12,7 +12,7 @@ class agregarAlumno extends controllerExtended {
       $alumno->setapellidos($request->getParam('apellidos'));
       $alumno->setgenero($request->getParam('genero'));
       $alumno->setdireccion($request->getParam('direccion'));
-      $alumno->settel_fijo($request->getParam('telfijo'));
+      $alumno->setTelfijo($request->getParam('telfijo'));
       $alumno->setcelular($request->getParam('celular'));
       $alumno->setcorreo($request->getParam('correo'));
       $alumno->setrh($request->getParam('rh'));

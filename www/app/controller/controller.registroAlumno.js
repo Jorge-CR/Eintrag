@@ -7,35 +7,56 @@ angular.module('Eintrag').controller('registroAlumnoController', ['$scope', 'reg
             cedula: '',
             genero: '',
             direccion: '',
-            tel_fijo: '',
+            telfijo: '',
             celular: '',
             correo: '',
             rh: '',
             grado: '',
-            nombre_acudiente: '',
-            celular_acudiente: '',
-            acciones: ''
+            acudiente: '',
+            celacu: ''
+           
         };
-        cargarTabla();
+       cargarTabla();
         $scope.alumnoGuardado = false;
 
 
 $scope.guardarA = function () {
             agregarAlumno.agregarAlu($scope.dataRegistrarAlumno).then(function successCallback(response) {
-                $scope.alumnoRegistrado = false;
+                $scope.alumnoGuardado = false;
                 $scope.dataRegistrarUsuario = {};
                 if (response.data.code == 500) {
                 } else {
-                    $scope.alumnoRegistrado = true;
+                    $scope.datos = {};
+                    $scope.alumnoGuardado = true;
                     $scope.dataRegistrarAlumno = '';
+                     console.log(response);
+                     $scope.tabla = response.data.datos;
+                      $timeout(function () {
+                    }, 700);
+                    $timeout(function () {
+                        // $route.reload();
+                        window.location.reload();
+                    }, 1000);
                 }
             }, function errorCallback(response) {
                 console.error(response);
             });
         };
-        
+             function cargarTabla() {
+            agregarAlumno.cargarTabla.then(function successCallback(respTabla) {
+                console.log(respTabla);
+                $scope.tabla = respTabla.data.alumnos;
+            }, function errorCallback(respTabla) {
+                console.log(respTabla);
+            });
+        }
+        $scope.eliminar = function (dato) {
+            $('#eliminarAlumno').modal('toggle');
+            $scope.nombre = dato.per_nombre;
+            $scope.ideliminar = dato.per_id;
+        };
         $scope.submitEliminarAlumno = function () {
-            guardarAlumno.eliminarAlumno({id: $scope.ideliminar}).then(function successCallback(response) {
+            agregarAlumno.eliminarAlumno({id: $scope.ideliminar}).then(function successCallback(response) {
                 $scope.alumnoEliminado = false;
                 if (response.data.codigo == 500) {
                 } else {
@@ -45,7 +66,7 @@ $scope.guardarA = function () {
                     }, 700);
                     $timeout(function () {
                         // $route.reload();
-                        window.location.reload();
+//                        window.location.reload();
                     }, 1000);
                 }
             }, function errorCallback(response) {

@@ -1,6 +1,6 @@
 <?php
 
-class r_persona {
+class alumno {
 
     private $id;
     private $cedula;
