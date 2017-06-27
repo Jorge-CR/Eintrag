@@ -66,14 +66,14 @@ $scope.guardarA = function () {
                     }, 700);
                     $timeout(function () {
                         // $route.reload();
-//                        window.location.reload();
+                        window.location.reload();
                     }, 1000);
                 }
             }, function errorCallback(response) {
                 console.error(response);
             });
         };
-        $scope.editar = function (x) {
+        $scope.editar2 = function (x) {
             $sessionStorage.datos = x;
             $location.path('/EditarAlumno');
 

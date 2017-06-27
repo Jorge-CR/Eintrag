@@ -62,6 +62,11 @@ angular.module('Eintrag').config(['$routeProvider', '$httpProvider', function co
                     templateUrl: 'app/template/EditarUsuario.html',
                     middleware: ['comprobarSession']
                 }).
+                when('/EditarAlumno', {
+                    controller: 'editarAlumnoController',
+                    templateUrl: 'app/template/EditarAlumno.html',
+                    middleware: ['comprobarSession']
+                }).
                 when('/controlEntrada', {
                     controller: 'controlEntradaController',
                     templateUrl: 'app/template/controlEntrada.html',

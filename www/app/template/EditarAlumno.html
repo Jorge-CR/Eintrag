@@ -1,0 +1,147 @@
+
+<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+<div class="row">
+    <div class="franja1">
+        <div class="col-lg-11">
+            <font  class="col-lg-offset-5 tituloacercade" color="black" face="Monotype"  >Editar Alumno</font><a href="#!/AgUsuario"><span title="Cerrar session" class="fa fa-sign-out salir" aria-hidden="true"></span></a>
+        </div>    
+    </div>
+</div>
+<!--Botones-->
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="page-header">
+            <font class="letraE"><small class="glyphicon glyphicon-pencil " ></small> Editar Alumno<a href="#!/inicio"><small class="glyphicon glyphicon-menu-right" style="float: right"></small></a></font>
+        </div>
+    </div>
+    <form ng-submit="submitEditarAlumno()">
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-4 tex1">
+                <div class="alert alert-success" ng-show="AlumnoEditado">
+                    <center>Alumno Editado Con Exito</center>
+                </div>
+
+                <div class="col-lg-6 col-lg-offset-0">
+                    <div class="form-group" hidden>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <input ng-model="editarA.id" type="text" class="form-control" aria-label="..." placeholder="ID" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.nombre" class="form-control" aria-label="..." placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="editarA.celular" class="form-control" aria-label="..." placeholder="Celular">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.apellidos" class="form-control" aria-label="..." placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i> 
+                            </span>
+                            <input type="email" ng-model="editarA.correo"class="form-control" aria-label="..." placeholder="Correo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i> 
+                            </span>
+                            <input type="number" ng-model="editarA.cedula"class="form-control" aria-label="..." placeholder="Cedula">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.rh" class="form-control" aria-label="..." placeholder="RH">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-venus-mars"></i> 
+                            </span>
+                            <select ng-model="editarA.genero" class="form-control input-sm" aria-label="...">
+                                <option value="">Seleccione genero</option>
+                                <option >Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-graduation-cap"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.grado" class="form-control" aria-label="..." placeholder="Grado">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.direccion" class="form-control" aria-label="..." placeholder="Dirección">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i> 
+                            </span>
+                            <input type="text" ng-model="editarA.acudiente" class="form-control" aria-label="..." placeholder="Nombre de Acudiente">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i> 
+                            </span>
+                            <input type="number" ng-model="editarA.telfijo" class="form-control" aria-label="..." placeholder="Tel_Fijo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i> 
+                            </span>
+                            <input type="number" ng-model="editarA.celacu" class="form-control" aria-label="..." placeholder="Celular Acudiente">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-lg-offset-0">
+                <div class="col-lg-4">
+                    <button type="submit" class="btn btn-default btn-block buttonE" title="Editar">Editar</button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="reset" class="btn btn-default btn-block buttonE" title="Limpiar">limpiar</button>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#!/registroAlumno" class="btn btn-default btn-block buttonE" title="Cancelar">cancelar</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </form> 
+    <div class="row">
+        <div class=" panelMp">
+            <div class="col-lg-11">
+                <p class="col-lg-offset-4 letraf">Institucion Educativa Ramon Martinez Benitez</p>
+            </div>
+        </div>
+    </div>  
+</div>
+
