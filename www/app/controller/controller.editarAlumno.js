@@ -15,20 +15,20 @@ angular.module('Eintrag').controller('editarAlumnoController', ['$scope', 'edita
         $scope.editarA.acudiente= $sessionStorage.datos.per_acudiente;
         $scope.editarA.telfijo = parseInt ($sessionStorage.datos.per_telfijo);
         $scope.editarA.celacu = parseInt($sessionStorage.datos.per_celacu);
-        
-        console.log($scope.editarA);
-
+       
         $scope.submitEditarAlumno = function () {
             editarAlumno.editarAlumno($scope.editarA).then(function successCallback(response) {
                 $scope.AlumnoEditado = false;
                 $scope.editarA = {};
-                if (response.data.code == 500) {
+                if (response.data.code == 500)
+                {
+                    console.log('no edito');
                 } else {
                     $scope.AlumnoEditado = true;
                     $scope.editarA = '';
                     $timeout(function () {
                         // $route.reload();
-                        window.location.reload();
+//                        window.location.reload();
                         $location.path('/registroAlumno');
                     }, 1000);
                 }

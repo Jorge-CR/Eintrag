@@ -1,3 +1,4 @@
+
 <div class="row">
 <div class="franja1">
     <div class="col-lg-12">
@@ -19,35 +20,15 @@
                     <th>Horas Salida</th>               
                 </tr>
 
-                <tr>                    
-                    <th>10/05/2017</th>
-                    <th>11125479568</th>
-                    <th>Jeferson Andres</th>
-                    <th>Castaño Giraldo</th>                   
-                    <th>10-1</th>
-                    <th>08:00 am</th>
-                    <th>12:00 pm</th>
-                </tr>
-
-                <tr>
-                    <th>10/05/2017</th>
-                    <th>11125479568</th>
-                    <th>Jeferson Andres</th>
-                    <th>Castaño Giraldo</th>                   
-                    <th>10-1</th>
-                    <th>08:00 am</th>
-                    <th>12:00 pm</th>
-                </tr>
-
-                <tr>
-                    <th>10/05/2017</th>
-                    <th>11125479568</th>
-                    <th>Jeferson Andres</th>
-                    <th>Castaño Giraldo</th>                   
-                    <th>10-1</th>
-                    <th>08:00 am</th>
-                    <th>12:00 pm</th>
-                </tr>
+         <tr ng-repeat="reporte in reportes">
+                <td>{{reporte.per_created_at}}</td>
+                <td>{{reporte.per_nombre}}</td>
+                <td>{{reporte.per_apellidos}}</td>
+                <td>{{reporte.per_cedula}}</td>
+                <td>{{reporte.per_grado}}</td>
+                <td>{{reporte.ent_rent}}</td>
+                <td>{{reporte.ent_rsal}}</td>
+              </tr>
 
             </table>
             <nav aria-label="...">
@@ -63,4 +44,3 @@
     <div class="col-lg-12 panelMp franja5">
     </div>
 </div>
-
