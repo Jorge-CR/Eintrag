@@ -100,8 +100,13 @@
 }
 .linkCopiR{
     float: right;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 10px;
+}
+.CopiR{
+    float: right;
+    margin-right: 40px;
+    color: black;
 }
 .buttonM{
     background: green !important;
@@ -295,9 +300,19 @@
 }
 .salir{
     color: black;
-    font-size: 52px;
+    font-size: 50px;
     margin-left: 0px;
     float: right;
+    margin-right: 25px;
+    margin-top: 15px;
+
+}
+.salir1{
+    color: black;
+    font-size: 50px;
+    margin-left: 0px;
+    float: right;
+    margin-right: 0px;
     margin-top: 15px;
 
 }
@@ -343,3 +358,19 @@
 
 }
 /*-----------------------------------------/controlEntrada--------------------------------------*/
+/*-----------------------------------------/reportes--------------------------------------*/
+.tituloReportes{
+    font-size: 55px;
+    margin-right: 25px;
+}
+.tituloReporte{
+    font-size: 55px;
+    
+}
+.icon{
+    margin-left: 600px;
+    color: black;
+    font-size: 50px;
+        
+}
+/*-----------------------------------------/reportes--------------------------------------*/
