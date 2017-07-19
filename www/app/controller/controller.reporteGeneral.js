@@ -1,4 +1,4 @@
-angular.module('Eintrag').controller('reporteGeneralController', ['$scope','$sessionStorage','ReporteGeneralService', function ($scope,$sessionStorage,agregarReportes) {
+angular.module('Eintrag').controller('reporteGeneralController', ['$scope', '$sessionStorage', 'ReporteGeneralService', '$timeout', '$location', function ($scope, $sessionStorage, agregarReportes, $timeout, location) {
         $scope.reportes = [];
         $scope.pintarTabla = function () {
             agregarReportes.RepGeneral.then(function successCallback(response) {
@@ -10,6 +10,7 @@ angular.module('Eintrag').controller('reporteGeneralController', ['$scope','$ses
                     case 500:
                         $scope.reportes = [];
                 }
+
             });
         };
 //
